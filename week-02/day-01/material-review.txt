@@ -1,0 +1,30 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char chracter = 'c';
+            string message = "Such text!";
+            int number0 = 230;
+            int number1 = 78;
+            double suchvalue = number0 / (double)number1;
+
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine(i);
+            }
+
+            while (number0 > 5)
+            {
+                number0 -= 6;
+            }
+            //Console.Beep();
+            Console.WriteLine(suchvalue);
+            string input = Console.ReadLine();
+            Console.ReadLine();
+        }
+    }
+}
