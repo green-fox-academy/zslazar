@@ -20,7 +20,12 @@ namespace GreenFox
 
             //megjeleníti most csak a 2 értéket egymás mellett, először szozoztassuk össze
 
-            Console.WriteLine("Allnumber, " + (chickenleg * 2) + (pigleg * 4));
+            int chlegs = chickenleg * 2;
+            int plegs = pigleg * 4;
+
+            int allegs = chlegs + plegs;
+
+            Console.WriteLine("legs: " + allegs);
 
             Console.ReadLine();
 
