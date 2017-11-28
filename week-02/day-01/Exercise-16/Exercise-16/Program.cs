@@ -18,6 +18,8 @@ namespace GreenFox
             string pig = Console.ReadLine();
             int pigleg = int.Parse(pig);
 
+            //megjeleníti most csak a 2 értéket egymás mellett, először szozoztassuk össze
+
             Console.WriteLine("Allnumber, " + (chickenleg * 2) + (pigleg * 4));
 
             Console.ReadLine();
