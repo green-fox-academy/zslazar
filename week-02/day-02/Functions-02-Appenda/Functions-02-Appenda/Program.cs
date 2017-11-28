@@ -13,6 +13,11 @@ namespace Example
         {
             string am = "kuty";
             appendA(am);
+
+            string bm = "cic";
+            appendA(bm);
+
+            Console.ReadLine();
         }
 
     // - Print the result of `appendA(am)`
@@ -20,7 +25,7 @@ namespace Example
         static void appendA(string adda)
         {
             Console.WriteLine(adda + "a");
-            Console.ReadLine();
+            
         }
     }
 }
