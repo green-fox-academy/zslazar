@@ -12,12 +12,17 @@ namespace SimpleReplace
             string example = "In a dishwasher far far away";
 
             //Console.WriteLine(sampleString1.Replace("some","apple"));
-            
+
             // I would like to replace "dishwasher" with "galaxy" in this example, but it has a problem.
             // Please fix it for me!
             // Expected ouput: In a galaxy far far away
 
-            Console.WriteLine(example.Replace("dishwasher", "galaxy"));
+            //first solution
+            //Console.WriteLine(example.Replace("dishwasher", "galaxy"));
+
+            //second solution
+            example = example.Replace("dishwasher", "galaxy");
+            Console.WriteLine(example);
             Console.ReadLine();
         }
     }
