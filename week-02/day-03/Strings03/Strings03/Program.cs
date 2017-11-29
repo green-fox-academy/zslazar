@@ -16,8 +16,13 @@ namespace TakesLonger
             // Add "always takes longer than" to the StringBuilder (quote) between the words "It" and "you"
             // Using pieces of the quote variable (instead of just redefining the string)
 
+            //solution01
             //quote = quote.Insert(21, "always takes longer than ");
 
+            //solution02 
+            //string newquote = quote.Insert(21, "always takes longer than ");
+
+            //solution03
             //split string
             string start = quote.Substring(0, 20);
             string add = "always takes longer than ";
