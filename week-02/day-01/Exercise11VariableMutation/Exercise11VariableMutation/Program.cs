@@ -34,8 +34,13 @@ namespace GreenFox
 
             // please cube of e's value
             // double value5 = Math.Pow(2, 3);??
-            int e = 8;
-            e = e * e * e;
+            double e = 8;
+
+            //solution1
+            //e = e * e * e;
+
+            //solution2
+            e = Math.Pow(e, 3);
             Console.WriteLine(e);
 
             // tell if f1 is bigger than f2 (print as a boolean)
