@@ -11,9 +11,9 @@ namespace _23IwontCheat
             // "I won't cheat on the exam!"
 
             string text = "I won't cheat on the exam!";
-            for (int i = 0; i <= 99; i++)
+            for (int i = 0; i <= 100; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(i + ". " + text);
             }
 
             Console.ReadLine();
