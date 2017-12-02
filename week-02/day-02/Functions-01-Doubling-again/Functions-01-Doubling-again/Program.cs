@@ -8,7 +8,7 @@ namespace Functions_01_Doubling_again
         // - Create a function called `doubling` that doubles it's input parameter
         // - Print the result of `doubling(ak)`
 
-        public static void Doubling()
+        public static void doubling()
         {
             int ak = 123;
             Console.WriteLine(ak * 2);
@@ -16,7 +16,7 @@ namespace Functions_01_Doubling_again
 
         static void Main(string[] args)
         {
-            Doubling();
+            doubling();
             Console.ReadLine();
         }
     }

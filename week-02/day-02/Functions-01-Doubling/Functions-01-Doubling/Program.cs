@@ -1,9 +1,12 @@
 ﻿using System;
 
-namespace Functions_01_Doubling
+namespace Doubling
 {
     class Program
     {
+        // - Create a function called `doubling` that doubles it's input parameter
+
+
         static void Main(string[] args)
         // - Create an integer variable named `ak` and assign the value `123` to it
         // - Create a function called `doubling` that doubles it's input parameter
@@ -13,7 +16,7 @@ namespace Functions_01_Doubling
             int ak = 123;
 
             ak *= 2;
-            Console.WriteLine("doubling(ak) " + ak);
+            Console.WriteLine(ak);
             Console.ReadLine();
         }
     }
