@@ -38,7 +38,7 @@ namespace Exercise33GuessNumber
 
                 else
                 {
-                    Console.WriteLine("You found the number: 8");
+                    Console.WriteLine("You found the number: {0}", userGuess);
 
                 }
             }
