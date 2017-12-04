@@ -56,8 +56,8 @@ namespace Practice
             //sw.WriteLine(line1);
 
             //ugyanaz mint sw.Dispose(); csak dispose kitorli a memoriabol 
-            //sw.Close();
-
+            //sw.Close(); --- .Close();!!! enelkul nem mukszik...
+           
         }
     }
 }
