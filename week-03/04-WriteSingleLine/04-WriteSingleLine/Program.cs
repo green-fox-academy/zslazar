@@ -28,10 +28,7 @@ namespace _04_WriteSingleLine
                     Console.WriteLine(errormsg);
                 }
 
-                finally
-                {
-                    Console.ReadLine();
-                }
+            
         }
     }
 }
