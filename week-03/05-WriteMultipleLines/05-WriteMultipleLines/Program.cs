@@ -17,24 +17,32 @@ namespace _05_WriteMultipleLines
     {
         static void Main(string[] args)
         {
-            string path = @"C:\greenfox\zslazar\week-03\text.txt";
-            string word = "apple";
-            int number = 5;
+            try
+            {
+                string path = @"C:\greenfox\zslazar\week-03\text.txt";
+                string word = "banana";
+                int number = 5;
 
+                Input(path, word, number);
+            }
+
+            catch
+            {
+            }
+        }
+
+        static void Input(string path, string word, int number)
+        {
             StreamWriter input = new StreamWriter(path);
-
 
             for (int i = 0; i < number; i++)
             {
                 input.WriteLine(word);
-                
             }
             input.Close();
         }
 
-        
-
-
 
     }
 }
+
