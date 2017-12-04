@@ -19,8 +19,8 @@ namespace CountLines
             try
             {
                 string number = Console.ReadLine();
-                Counter(number);
-                Console.WriteLine(number);
+                
+                Console.WriteLine(Counter(number));
             }
             catch (Exception)
             {
@@ -31,7 +31,7 @@ namespace CountLines
 
         }
 
-        static void Counter(string count)
+        static string Counter(string count)
         {
             //beolvastatom a tartalmat
             string[] lenght = File.ReadAllLines(count);
@@ -39,6 +39,7 @@ namespace CountLines
             int number = lenght.Length;
             //kiirtom a kapott eredmenyt
             Console.WriteLine(number);
+            return count;
 
         }
     }
