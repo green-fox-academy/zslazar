@@ -6,14 +6,14 @@ namespace Functions_05_Factorial
     // - Create a function called `factorio`
     //   that returns it's input's factorial
     {
-        public static void Factorio(int input)
+        public static int Factorio(int input)
         {
             int fact = 1;
             for (int i = 1; i <= input; i++)
             {
                 fact *= i;
             }
-            Console.WriteLine(fact);
+            return fact;
         }
 
         static void Main(string[] args)
@@ -21,6 +21,7 @@ namespace Functions_05_Factorial
             Console.WriteLine("give me a number");
             int input = int.Parse(Console.ReadLine());
             Factorio(input);
+            Console.WriteLine(Factorio(input));
 
             Console.ReadLine();
         }
