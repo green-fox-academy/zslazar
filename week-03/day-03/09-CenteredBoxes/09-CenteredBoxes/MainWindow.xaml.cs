@@ -37,11 +37,17 @@ namespace _09_CenteredBoxes
 
         public static void CenterSquares(FoxDraw foxDraw, double Size)
         {
+            Random color = new Random();
                         
             for (int i = 1; i < 4; i++)
             {
                 foxDraw.DrawRectangle(200 - Size/2, 200 - Size/2, Size, Size);
                 Size = Size - 50;
+
+                foxDraw.FillColor(Color.FromRgb(
+                    (byte)color.Next(255),
+                    (byte)color.Next(255), 
+                    (byte)color.Next(255)));
             }
         }
 
