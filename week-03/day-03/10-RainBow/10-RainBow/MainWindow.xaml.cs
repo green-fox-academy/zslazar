@@ -25,25 +25,31 @@ namespace _10_RainBow
         {
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
-            double Size = 600;
-            Rainbow(foxDraw, Size);
-            // create a square drawing function that takes 2 parameters:
-            // the square size, and the fill color,
-            // and draws a square of that size and color to the center of the canvas.
-            // create a loop that fills the canvas with rainbow colored squares.
+            double Size = 400;
+            CenterSquares(foxDraw, Size);
+
+            // create a square drawing function that takes 1 parameter:
+            // the square size
+            // and draws a square of that size to the center of the canvas.
+            // draw 3 squares with that function.
 
         }
 
-        public static void Rainbow(FoxDraw foxDraw, double Size)
+        public static void CenterSquares(FoxDraw foxDraw, double Size)
         {
-            for (int i = 1; i < 10; i++)
-            {
-                foxDraw.DrawRectangle(300 - Size / 2, 300 - Size / 2, Size, Size);
-                Size = Size - (i + 1)* 10;
-                //foxDraw.FillColor(color);
-            }
+            Random color = new Random();
 
+            for (int i = 1; i < 8; i++)
+            {
+                foxDraw.DrawRectangle(200 - Size / 2, 200 - Size / 2, Size, Size);
+                Size = Size - 50;
+
+                foxDraw.FillColor(Color.FromRgb(
+                    (byte)color.Next(255),
+                    (byte)color.Next(255),
+                    (byte)color.Next(255)));
+            }
         }
-       
+
     }
 }
