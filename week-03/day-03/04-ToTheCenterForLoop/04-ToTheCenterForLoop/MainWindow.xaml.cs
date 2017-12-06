@@ -14,30 +14,28 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GreenFox;
 
-namespace _04_ToTheCenterAgain
+namespace ToTheCenterForLoop
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
-            DrawToCenter(foxDraw, 0, 0);
-            DrawToCenter(foxDraw, 0, 175);
-            DrawToCenter(foxDraw, 0, 350);
-            
+            DrawThreeLines(foxDraw);
+            // create a line drawing function that takes 2 parameters:
+            // the x and y coordinates of the line's starting point
+            // and draws a line from that point to the center of the canvas.
+            // draw 3 lines with that function.
         }
-        public static void DrawToCenter(FoxDraw foxDraw, int x1, int y1)
+        public static void DrawThreeLines(FoxDraw foxDraw)
         {
             foxDraw.StrokeColor(Colors.Green);
-            foxDraw.DrawLine(x1, y1, 263, 175);
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 3; i++)
             {
-                Console.WriteLine(i);
+                foxDraw.DrawLine(10*i, 20*i, 263, 175);
             }
 
         }
