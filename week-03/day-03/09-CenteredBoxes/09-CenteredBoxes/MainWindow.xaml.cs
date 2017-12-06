@@ -13,6 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GreenFox;
+            
+            // create a square drawing function that takes 1 parameter:
+            // the square size
+            // and draws a square of that size to the center of the canvas.
+            // draw 3 squares with that function.
 
 namespace _09_CenteredBoxes
 {
@@ -26,29 +31,21 @@ namespace _09_CenteredBoxes
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
             double Size = 200;
+
+
+            for (int i = 1; i < 3; i++)
+            {
+                CenterSquares(foxDraw, Size);
+                Size = Size - 50;
+            }
+
             CenterSquares(foxDraw, Size);
-
-            // create a square drawing function that takes 1 parameter:
-            // the square size
-            // and draws a square of that size to the center of the canvas.
-            // draw 3 squares with that function.
-
+                       
         }
 
         public static void CenterSquares(FoxDraw foxDraw, double Size)
         {
-            Random color = new Random();
-                        
-            for (int i = 1; i < 4; i++)
-            {
-                foxDraw.DrawRectangle(200 - Size/2, 200 - Size/2, Size, Size);
-                Size = Size - 50;
-
-                foxDraw.FillColor(Color.FromRgb(
-                    (byte)color.Next(255),
-                    (byte)color.Next(255), 
-                    (byte)color.Next(255)));
-            }
+            foxDraw.DrawRectangle(200 - Size/2, 200 - Size/2, Size, Size);
         }
 
     }
