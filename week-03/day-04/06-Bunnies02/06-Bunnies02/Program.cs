@@ -13,7 +13,7 @@ namespace _06_Bunnies02
         {
             int ear = 2;
             int freakEar = ear + 1;
-            int bunnies = 20;
+            int bunnies = 2;
             Console.WriteLine(CountEar(bunnies, ear, freakEar));
             Console.ReadLine();
         }
@@ -28,13 +28,9 @@ namespace _06_Bunnies02
             {
                 return ear;
             }
-            else if (bunnies % 2 == 0)
+            else
             {
-                return freakEar + CountEar(bunnies - 1, ear, freakEar);
-            }
-            else 
-            {
-                return ear + CountEar(bunnies - 1, ear, freakEar);
+                return ear + freakEar + CountEar(bunnies - 2, ear, freakEar);
             }
             
         }
