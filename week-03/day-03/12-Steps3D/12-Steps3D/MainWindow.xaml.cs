@@ -25,21 +25,21 @@ namespace _12_Steps3D
         {
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
-            DrawRectangle(foxDraw);
+            double x = 5;
+            double y = 5;
+            
+            for (int i = 0; i < 5; i++)
+            {
+                DrawSqures(foxDraw, x, y);
+                x = x + x;
+                y = y * 2;
+            }
         }
 
-        public static void DrawRectangle(FoxDraw foxDraw)
+        public static void DrawSqures(FoxDraw foxDraw, double ax, double ay)
         {
             foxDraw.FillColor(Colors.AliceBlue);
-            int size = 20;
-
-            for (int i = 0; i < 7; i++)
-            {
-                foxDraw.DrawRectangle(i * 20, i * 20, size, size);
-                i = i * 2;
-                size = size * 2;
-            }
-
+            foxDraw.DrawRectangle(ax, ay, ax, ay);
         }
     }
 }
