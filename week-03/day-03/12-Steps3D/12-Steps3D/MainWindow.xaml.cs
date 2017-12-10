@@ -28,18 +28,18 @@ namespace _12_Steps3D
             double x = 5;
             double y = 5;
             
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 6; i++)
             {
                 DrawSqures(foxDraw, x, y);
-                x = x + x;
-                y = y * 2;
+                x = x + y;
+                y = y * 1.5;
             }
         }
 
         public static void DrawSqures(FoxDraw foxDraw, double ax, double ay)
         {
             foxDraw.FillColor(Colors.AliceBlue);
-            foxDraw.DrawRectangle(ax, ay, ax, ay);
+            foxDraw.DrawRectangle(ax, ax, ay, ay);
         }
     }
 }
