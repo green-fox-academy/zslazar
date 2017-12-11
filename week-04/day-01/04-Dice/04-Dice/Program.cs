@@ -17,9 +17,10 @@ namespace _04_Dice
             for (int j = 0; j < 6; j++)
             {
                 dices[j].Roll();
-                if (dices[j].GetCurrent() != 0 )
+                while (dices[j].GetCurrent() != 6 )
                 {
                     dices[j].ReRoll();
+                    dices[j].GetCurrent();
                 }
                 Console.WriteLine(dices[j].GetCurrent());
             }
