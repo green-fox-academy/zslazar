@@ -26,7 +26,7 @@ namespace _06_Animals
             Thirst -= 1;
         }
 
-        public void Play ()
+        public void Play()
         {
             Hunger += 1;
             Thirst += 1;

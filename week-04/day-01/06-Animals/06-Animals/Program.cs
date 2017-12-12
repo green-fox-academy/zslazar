@@ -7,13 +7,14 @@ namespace _06_Animals
         static void Main(string[] args)
         {
 
-            var animal01= new Animal();
+            var bunny = new Animal();
 
-            Console.WriteLine("Hunger rate: " + animal01.Hunger);
-            animal01.Eat();
-            Console.WriteLine("New hunger rate: " + animal01.Hunger);
+            Console.WriteLine("Hunger rate: " + bunny.Hunger);
+            bunny.Eat();
+            Console.WriteLine("New hunger rate: " + bunny.Hunger);
             Console.ReadLine();
 
+            
             
         }
     }
