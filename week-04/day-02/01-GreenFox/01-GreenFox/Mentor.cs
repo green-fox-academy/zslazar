@@ -8,11 +8,8 @@ namespace _01_GreenFox
     {
         public string level { get; set; }
 
-        public Mentor(string name, int age, string gender, string level)
+        public Mentor(string name, int age, string gender, string level) : base(name, age, gender)
         {
-            this.name = name;
-            this.age = age;
-            this.gender = gender;
             this.level = level;
         }
 
@@ -24,12 +21,12 @@ namespace _01_GreenFox
             level = "intermediate";
         }
 
-        public void Introduce()
+        public override void Introduce()
         {
             Console.WriteLine("Hi, I'm {0} a {1} year old {2} {3} mentor", name, age, gender, level);
         }
 
-        public void GetGoal()
+        public override void GetGoal()
         {
             Console.WriteLine("Educate brilliant junior software developers.");
         }

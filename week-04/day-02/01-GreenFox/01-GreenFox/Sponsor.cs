@@ -9,11 +9,10 @@ namespace _01_GreenFox
         public string company { get; set; }
         public int hiredStudents { get; set; }
         
-        public Sponsor(string name, int age, string gender)
+        public Sponsor(string name, int age, string gender, string company) : base(name, age, gender)
         {
-            this.name = name;
-            this.age = age;
-            this.gender = gender;
+            this.company = company;
+            this.hiredStudents = 0;
         }
 
         public Sponsor()
@@ -25,19 +24,20 @@ namespace _01_GreenFox
             hiredStudents = 0;
         }
 
-        public void Introduce()
+        public override void Introduce()
         {
             Console.WriteLine("Hi, I'm {0} a {1} year old {2} who represents {3} and hired {4} students so far.", name, age, gender, company, hiredStudents);
         }
 
-        public void GetGoal()
+        public override void GetGoal()
         {
             Console.WriteLine("Hire brilliant junior software developers.");
         }
 
-        public void Hire()
+        public int Hire()
         {
-            hiredStudents++;
+            hiredStudents = hiredStudents + 1;
+            return hiredStudents;
         }
     }
 }
