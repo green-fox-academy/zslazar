@@ -6,7 +6,9 @@ namespace _01_GreenFox
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var xx = new Student();
+            xx.Introduce();
+            Console.ReadLine();
         }
     }
 }
