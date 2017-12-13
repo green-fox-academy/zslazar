@@ -20,8 +20,20 @@ namespace Test
 
             //assert
             Assert.AreEqual(19, sum);
-
-
         }
+
+        [Test]
+        public void TestMethod2()
+        {
+            //arrange
+            var numbers = new List<int> { 8};
+
+            //act
+            int sum = numbers.Sum();
+
+            //assert
+            Assert.AreEqual(8, sum);
+        }
+        
     }
 }
