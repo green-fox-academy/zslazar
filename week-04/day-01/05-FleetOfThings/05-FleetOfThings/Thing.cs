@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+
 
 namespace _05_FleetOfThings
 {
@@ -18,5 +18,15 @@ namespace _05_FleetOfThings
     {
         this.Completed = true;
     }
-}
+
+    public bool GetCompleted()
+    {
+       return Completed;
+    }
+
+    public string GetName()
+    {
+        return Name;
+    }
+    }
 }
