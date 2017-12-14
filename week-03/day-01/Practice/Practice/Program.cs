@@ -47,8 +47,15 @@ namespace Practice
             //Console.WriteLine(line);
             //}
 
-            //StreamWriter sw = new StreamWriter(@"C:\greenfox\zslazar\week-03\text.txt", true);
             // hozzafuzi a meglevo tartalomhoz
+            //StreamWriter sw = new StreamWriter(@"C:\greenfox\zslazar\week-03\text.txt", true);
+            //string line1 = "Fifa";
+            //sw.WriteLine(line1);
+            ////
+            //StreamWriter sw = new StreamWriter("TasksInText.txt", true);
+            //string line = "Feed the monkey";
+            //sw.WriteLine(line);
+            //sw.Close();
 
             //StreamWriter sw = new StreamWriter(@"C:\greenfox\zslazar\week-03\text.txt");
             //string line1 = "Fifa";
@@ -57,7 +64,7 @@ namespace Practice
 
             //ugyanaz mint sw.Dispose(); csak dispose kitorli a memoriabol 
             //sw.Close(); --- .Close();!!! enelkul nem mukszik...
-           
+
         }
     }
 }
