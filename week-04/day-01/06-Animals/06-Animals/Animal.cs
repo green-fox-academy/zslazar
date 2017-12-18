@@ -9,10 +9,10 @@ namespace _06_Animals
         public int Hunger { get; set; }
         public int Thirst { get; set; }
 
-        public Animal()
+        public Animal(int hunger, int thirst)
         {
-            Hunger = 50;
-            Thirst = 50;
+            Hunger = hunger;
+            Thirst = thirst;
         }
 
         public void Eat()

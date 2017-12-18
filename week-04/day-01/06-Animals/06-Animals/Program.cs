@@ -7,7 +7,7 @@ namespace _06_Animals
         static void Main(string[] args)
         {
 
-            var bunny = new Animal();
+            var bunny = new Animal(50, 50);
 
             Console.WriteLine("Hunger rate: " + bunny.Hunger);
             bunny.Eat();
