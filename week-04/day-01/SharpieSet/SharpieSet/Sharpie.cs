@@ -22,7 +22,7 @@ namespace SharpieSet
 
         public void Use()
         {
-            InkAmount -= 1;
+            InkAmount -= 100;
         }
     }
 }

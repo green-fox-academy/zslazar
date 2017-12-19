@@ -14,7 +14,24 @@ namespace SharpieSet
 
         static void Main(string[] args)
         {
-            
+            var first = new Sharpie("Black", 6);
+            var second = new Sharpie("White", 7);
+            first.Use();
+            second.Use();
+                      
+                        
+            //Console.WriteLine(second.InkAmount);
+                                  
+            var newlist = new SharpieSet();
+            //newlist.Sharpies.Add(new Sharpie("White", 4));
+            newlist.Sharpies.Add(first);
+            newlist.Sharpies.Add(second);
+                            
+                                               
+            Console.WriteLine(newlist.CountUsable());
+            //Console.WriteLine(newlist.RemoveTrash());
+            Console.ReadLine();
+
         }
     }
 }
