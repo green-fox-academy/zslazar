@@ -10,7 +10,7 @@ namespace BookPages
             b.Add(new Page { Content = "This is the first page" });
             b.Add(new Page { Content = string.Empty });
             b.Add(new Page { Content = string.Empty });
-
+            b.Add(new Page { Content = "This is the second page" });
 
             Console.WriteLine(b.CountBlankPages());
             Console.ReadLine();
