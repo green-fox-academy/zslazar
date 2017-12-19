@@ -6,6 +6,8 @@ namespace BookPages
 {
     public class Book
     {
+        public string TheCharacter = "";
+
         private List<Page> Pages;
         
         public Book()
@@ -23,7 +25,7 @@ namespace BookPages
             int counter = 0;
             foreach (var page in Pages)
             {
-                if (page.Content.em)
+                if (page.Content.Equals(TheCharacter))
                 {
                     counter++;
                 }
