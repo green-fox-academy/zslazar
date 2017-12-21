@@ -11,12 +11,17 @@ namespace GardenApp
     //eg.watering with 40 and 4 of them need water then each gets watered with 10
     public class Garden
     {
-        public List<Plants> FlowerTree = new List<Plants>();
+        public List<Plants> FlowerTree { get; set; }
+
+        public Garden()
+        {
+            FlowerTree = new List<Plants>();
+        }
 
 
         public void Adding()
         {
-            FlowerTree.Add();
+           
         }
     }
 }
