@@ -11,7 +11,7 @@ namespace _05_Bunnies
         static void Main(string[] args)
         {
             int ear = 2;
-            int bunnies = 8;
+            int bunnies = 144;
             Console.WriteLine(CountEar(bunnies, ear));
             Console.ReadLine();
         }

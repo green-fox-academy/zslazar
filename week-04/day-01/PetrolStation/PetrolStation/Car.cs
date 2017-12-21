@@ -22,8 +22,5 @@ namespace PetrolStation
             Capacity = 100;
         }
 
-
-
-
     }
 }
