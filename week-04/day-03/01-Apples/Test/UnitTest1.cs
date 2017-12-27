@@ -21,6 +21,7 @@ namespace Test
             string output = apples.PrintMessage();
 
             //assert
+            //zarojelben az elso az elvart eredmeny a masodik a tesztelt
             Assert.AreEqual(message, output);
         }
     }
