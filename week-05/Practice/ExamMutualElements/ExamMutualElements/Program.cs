@@ -20,9 +20,20 @@ namespace MutualElements
         {
             List<int> commonList = new List<int>();
 
-            foreach (int number in firstList)
-                if (secondList.Contains(number) && !commonList.Contains(number))
-                    commonList.Add(number);
+            //first solution
+            //foreach (int number in firstList)
+            //    if (secondList.Contains(number) && !commonList.Contains(number))
+            //        commonList.Add(number);
+            //return commonList;
+
+            //second solution
+            for (int i = 0; i < secondList.Count; i++)
+            {
+                if (firstList.Contains(secondList[i]) && !commonList.Contains(secondList[i]))
+                {
+                    commonList.Add(secondList[i]);
+                }
+            }
             return commonList;
         }
     }
