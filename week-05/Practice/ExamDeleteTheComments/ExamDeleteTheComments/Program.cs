@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace ExamDeleteTheComments
 {
@@ -13,20 +14,23 @@ namespace ExamDeleteTheComments
            (2)reads the given file, and (3)remove the single line comments from it. It should write the comment-free */
             // code to the original file. (e.g. this line of comment is single lined, the one above not)
             //  Console.WriteLine();
-            string path = @"C:\greenfox\zslazar\week-05\Practice\Program.cs";
 
-            Reader(path);
-            Console.ReadLine();
+            string path = @"C:\greenfox\zslazar\week-05\Practice\Program.cs";
+            DeleteComments(path);
         }
-        
-        public static void Reader(string path)
+
+        static void DeleteComments(string path)
+        {
+            var streamWriter = new StreamWriter(path);
+            List<string> lines = File.ReadAllLines(path).ToList();
+            for (int i = 0; i < lines.Count; i++)
             {
-            StreamReader sr = new StreamReader(path);
-           
-            while (sr.Peek() >= 0)
-            {
-                Console.WriteLine(sr.ReadLine());
+                if (lines[i].Trim().Length < 2)
+                    streamWriter.WriteLine(lines[i]);
+                else if (lines[i].Trim().Substring(0, 2) != "//")
+                    streamWriter.WriteLine(lines[i]);
             }
+            streamWriter.Close();
         }
 
     }
