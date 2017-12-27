@@ -17,9 +17,9 @@ namespace Test
         {
             //arrange
             var program = new Program();
+            
             //static
-
-
+            
             //act
             //non static
             int result = program.Sum();

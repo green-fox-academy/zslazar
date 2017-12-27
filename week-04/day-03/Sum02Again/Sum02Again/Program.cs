@@ -11,7 +11,7 @@ namespace Sum02Again
             Console.WriteLine();
         }
 
-        public static int Sum()
+        public int Sum()
         {
             var list = new List<int>();
             list.Add(1);
