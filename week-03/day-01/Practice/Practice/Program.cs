@@ -34,17 +34,18 @@ namespace Practice
 
             //Console.ReadLine();
 
+            //kiirja a fileban levo tartamat
             //StreamReader sr = new StreamReader(@"C:\greenfox\zslazar\week-03\text.txt");
             //string line = "";
-            //while (sr.ReadLine() != null)
-            //{
-            //    Console.WriteLine(sr);
-            //}
-
             //while (line != null)
             //{
             //line = sr.ReadLine();
             //Console.WriteLine(line);
+            //}
+
+            //while (sr.ReadLine() != null)
+            //{
+            //    Console.WriteLine(sr);
             //}
 
             // hozzafuzi a meglevo tartalomhoz
