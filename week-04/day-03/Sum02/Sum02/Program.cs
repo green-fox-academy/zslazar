@@ -8,9 +8,9 @@ namespace Sum02
     {
         static void Main(string[] args)
         {
-            var numbers = new List<int> { 8, 2, 6, 3 };
-            int sum = numbers.Sum();  
-            Console.WriteLine(sum);
+        //    var numbers = new List<int> { 8, 2, 6, 3 };
+        //    int sum = numbers.Sum();  
+        //    Console.WriteLine(sum);
         }
     }
 }

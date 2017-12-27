@@ -34,6 +34,18 @@ namespace Test
             //assert
             Assert.AreEqual(8, sum);
         }
-        
+
+        [Test]
+        public void TestMethod3()
+        {
+            //arrange
+            var elements = new List<int> { 8, 10, 23, 75 };
+
+            //act
+            int allin = elements.Sum();
+
+            //assert
+            Assert.AreEqual(116, allin);
+        }
     }
 }
