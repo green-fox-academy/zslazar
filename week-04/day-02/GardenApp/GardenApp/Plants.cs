@@ -9,6 +9,7 @@ namespace GardenApp
         public int WaterAmount { get; set; }
         public double Absorb { get; set; }
         public string Color { get; set; }
+        public double Thirst { get; set; }
         //magaba foglalja a flowert meg a treet
 
         public Plants(int waterAmount, double absorb, string color)
@@ -18,10 +19,6 @@ namespace GardenApp
             Color = color;
         }
 
-        //public Garden()
-        //{
-        //    Plants = new List<Garden>();
-        //}
         
     }
 }
