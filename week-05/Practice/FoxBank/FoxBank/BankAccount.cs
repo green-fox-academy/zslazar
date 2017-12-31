@@ -49,9 +49,9 @@ namespace FoxBank
                 addOutMoney = amount;
                 Currency.Value = Currency.Value - amount;
                 //Currency.Value -= amount;
-            }
             return addOutMoney;
-
+            }
+            return 0;
         }
     }
 }
