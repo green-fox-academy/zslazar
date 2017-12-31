@@ -1,9 +1,13 @@
-using System;
+﻿using System;
 
 namespace _01_DivideByZero
 {
     class Program
     {
+        // create a function that takes a number
+        // divides ten with it,
+        // and prints the result.
+        // it should print "fail" if the parameter is 0
 
         public static int Divide(int number)
         {
