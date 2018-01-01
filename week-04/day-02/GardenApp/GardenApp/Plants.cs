@@ -6,19 +6,22 @@ namespace GardenApp
 {
     public class Plants
     {
-        public int WaterAmount { get; set; }
+        //magaba foglalja a flowert meg a treet
+        public double WaterLevel { get; set; }
         public double Absorb { get; set; }
         public string Color { get; set; }
         public double Thirst { get; set; }
-        //magaba foglalja a flowert meg a treet
 
-        public Plants(int waterAmount, double absorb, string color)
+        public Plants(double waterLevel, string color)
         {
-            WaterAmount = waterAmount;
-            Absorb = absorb;
+            WaterLevel = waterLevel;
             Color = color;
         }
 
-        
+        public void GetWater(double waterAmount)
+        {
+            WaterLevel = WaterLevel + waterAmount * Absorb;
+        }
+
     }
 }

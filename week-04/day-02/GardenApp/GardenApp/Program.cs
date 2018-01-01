@@ -19,17 +19,27 @@ namespace GardenApp
 
         static void Main(string[] args)
         {
-            //Garden newgarden = new Garden();
-            //newgarden.FlowerTree.Add(new Flower("yellow"));
-            //newgarden.FlowerTree.Add(new Flower("blue"));
-            //newgarden.FlowerTree.Add(new Tree("purple"));
-            //newgarden.FlowerTree.Add(new Tree("orange"));
-
-            //var flowerone = new Flower("yellow");
+            //var flowerone = new Flower(4, "pink");
             //newgarden.FlowerTree.Add(flowerone);
+            //vagy newgarden.FlowerTree.Add(new Flower(5, "yellow"));
+            //vagy newgarden.Planting(new Flower(4, "yellow flower"));
+
+            Garden newgarden = new Garden();
+
+            newgarden.Planting(new Flower(4, "yellow flower"));
+            newgarden.Planting(new Flower(4, "blue flower"));
+            newgarden.Planting(new Tree(7, "purple tree"));
+            newgarden.Planting(new Tree(7, "orange tree"));
             
 
+            newgarden.Watering(0);
             Console.WriteLine();
+
+            newgarden.Watering(40);
+            Console.WriteLine();
+
+            newgarden.Watering(70);
+            
             Console.ReadLine();
         }
 

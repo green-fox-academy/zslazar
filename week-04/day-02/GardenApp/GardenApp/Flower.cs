@@ -11,9 +11,10 @@ namespace GardenApp
     //eg.watering with 10 the flower's amount of water should only increase with 7.5
     public class Flower : Plants
     {
-        public Flower(string color) : base(0, 0.75, color)
+        public Flower(double waterLevel, string color) : base(waterLevel, color)
         {
-
+            Absorb = 0.75;
+            Thirst = 5;
         }
 
     }
