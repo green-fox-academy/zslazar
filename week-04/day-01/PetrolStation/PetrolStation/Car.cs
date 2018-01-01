@@ -11,7 +11,7 @@ namespace PetrolStation
     // initialize gasAmount -> 0
     // initialize capacity -> 100
     
-    class Car
+    public class Car
     {
     public int GasAmount { get; set; }
     public int Capacity { get; set; }
