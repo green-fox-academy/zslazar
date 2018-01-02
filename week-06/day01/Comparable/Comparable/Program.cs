@@ -17,7 +17,12 @@ namespace Comparable
 
             dominoes.Sort();
 
+            foreach (var item in dominoes)
+            {
+                Console.WriteLine(item.GetValues()[0] + " " + item.GetValues()[1] + " | ");
+            }
 
+            Console.ReadKey();
         }
     }
 }
