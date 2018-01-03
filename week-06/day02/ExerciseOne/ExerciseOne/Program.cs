@@ -7,6 +7,8 @@ namespace ExerciseOne
     {
         static void Main(string[] args)
         {
+            //Write a LINQ Expression to get the even numbers from the following array:
+
             int[] numbers = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
 
             //query syntax
