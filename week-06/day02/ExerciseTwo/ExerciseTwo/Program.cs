@@ -11,6 +11,15 @@ namespace ExerciseTwo
 
             int[] numbers = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
 
+            int amount = 0;
+
+            for (int i = 0; i < numbers.Length; i++)
+
+                if (numbers[i] % 2 != 0)
+                    amount++;
+
+            Console.WriteLine(amount);
+
             //query syntax
             var number = from n in numbers
                          where n % 2 != 0
@@ -27,7 +36,7 @@ namespace ExerciseTwo
 
             //output
             Console.WriteLine("method syntax output: " + numberMethOddAverage);
-            
+
             Console.ReadLine();
         }
     }
