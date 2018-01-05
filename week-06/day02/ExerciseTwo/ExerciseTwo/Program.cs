@@ -11,25 +11,17 @@ namespace ExerciseTwo
 
             int[] numbers = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
 
-            int amount = 0;
-
-            for (int i = 0; i < numbers.Length; i++)
-
-                if (numbers[i] % 2 != 0)
-                    amount++;
-
-            Console.WriteLine(amount);
-
             //query syntax
             var number = from n in numbers
                          where n % 2 != 0
                          select n;
 
             var result = number.Average();
+            numbers.Sum();
 
             //output
             Console.WriteLine("query syntax output: " + result);
-
+            
             //method syntax
             //var numberMethOddAverage = numbers.Where(x => (x % 2 != 0)).Average();
             var numberMethOddAverage = numbers.Where(x => (x % 2 == 1 || x % 2 == -1)).Average();
