@@ -12,12 +12,14 @@ namespace ExerciseTwo
             int[] numbers = { 1, 3, -2, -4, -7, -3, -8, 12, 19, 6, 9, 10, 14 };
 
             //query syntax
-            var number = (from n in numbers
-                          where n % 2 != 0
-                          select n).Average();
+            var number = from n in numbers
+                         where n % 2 != 0
+                         select n;
+
+            var result = number.Average();
 
             //output
-                Console.WriteLine($"[{number}]");
+            Console.WriteLine("query syntax output: " + result);
 
             //method syntax
             //var numberMethOddAverage = numbers.Where(x => (x % 2 != 0)).Average();
