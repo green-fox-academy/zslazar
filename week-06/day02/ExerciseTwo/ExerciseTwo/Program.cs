@@ -17,8 +17,7 @@ namespace ExerciseTwo
                          select n;
 
             var result = number.Average();
-            numbers.Sum();
-
+            
             //output
             Console.WriteLine("query syntax output: " + result);
             
