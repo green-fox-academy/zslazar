@@ -10,11 +10,24 @@ namespace WebApplicationPractice.Models
         public long Id { get; set; }
         public string Content { get; set; }
 
+        //public Greeting(int Counter, string name)
+        //{
+        //    Id = Counter;
+        //    Content = "Hello, " + name;
+
+        //}
+
+        //Hello World Web App
+        //public Greeting()
+        //{          
+        //}
+
         public Greeting(int Counter, string name)
         {
             Id = Counter;
             Content = "Hello, " + name;
-
         }
+
+
     }
 }

@@ -29,12 +29,14 @@ namespace WebApplicationPractice.Controllers
         //}
         //[Route("greeting/{id}")]
 
-        [Route("greeting")]
-        public IActionResult Greeting(string name)
-        {
-            Counter++;
-            var hello = new Greeting(Counter, name);
-            return new JsonResult(hello);
-        }
+        //[Route("greeting")]
+        //public IActionResult Greeting(int Counter, string name)
+        //public IActionResult Greeting()
+        //{
+            //Counter++;
+            //var hello = new Greeting(Counter, name);
+            //var hello = new Greeting();
+            //return new JsonResult(hello);
+        //}
     }
 }
