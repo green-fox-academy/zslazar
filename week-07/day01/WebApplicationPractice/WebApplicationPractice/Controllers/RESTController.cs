@@ -12,6 +12,8 @@ namespace WebApplicationPractice.Controllers
     [Route("api")]
     public class RESTController : Controller
     {
+        public static int Counter { get; set; } = 0;
+
         // GET: /<controller>/
         public IActionResult Index()
         {
@@ -28,10 +30,11 @@ namespace WebApplicationPractice.Controllers
         //[Route("greeting/{id}")]
 
         [Route("greeting")]
-        public IActionResult Greeting([FromQuery]int id, [FromQuery]string name)
+        public IActionResult Greeting(string name)
         {
-            //var hello = new Greeting();
-            return new JsonResult(new { Id = 1, Name = name });
+            Counter++;
+            var hello = new Greeting(Counter, name);
+            return new JsonResult(hello);
         }
     }
 }
