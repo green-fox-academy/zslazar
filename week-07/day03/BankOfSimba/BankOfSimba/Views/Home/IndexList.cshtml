@@ -20,7 +20,7 @@
             <tr>
                 <td>@Model.AnimalList.IndexOf(animals)</td>
                 <td>@animals.Name</td>
-                <td>@animals.Balance</td>
+                <td>@animals.Balance @animals.Currency</td>
                 <td>@animals.AnimalType</td>
                 @if (animals.Owner == true)
                 {
@@ -55,6 +55,29 @@
     <br />
     <form action="/list" method="post">
         <input type="submit" value="Submit">
+    </form>
+
+    <form action="/add" method="post">
+        Name:
+        <input type="text" name="Name" value="">
+        <br />
+        Balance:
+        <input type="text" name="Balance" value="">
+        <br />
+        Currency:
+        <input type="text" name="Currency" value="">
+        <br />
+        AnimalType:
+        <input type="text" name="AnimalType" value="">
+        <br />
+        Owner:
+        <input type="text" name="Owner" value="">
+        <br />
+        SoulType:
+        <input type="text" name="SoulType" value="">
+        <br />
+        <br />
+        <input type="submit" value="Add new account">
     </form>
 
 </body>

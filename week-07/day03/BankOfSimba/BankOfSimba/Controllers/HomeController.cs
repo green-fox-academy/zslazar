@@ -46,5 +46,11 @@ namespace BankOfSimba.Controllers
             return RedirectToAction("IndexList");
         }
 
+        [HttpPost("add")]
+        public IActionResult AddAnimal(BankAccount bankAccount)
+        {
+            animalVM.AnimalList.Add(bankAccount);
+            return RedirectToAction("IndexList");
+        }
     }
 }
