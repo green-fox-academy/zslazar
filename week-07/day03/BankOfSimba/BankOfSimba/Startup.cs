@@ -24,13 +24,9 @@ namespace BankOfSimba
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseMvcWithDefaultRoute();
             }
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello Partners!");
-            });
+            app.UseMvc(); 
         }
     }
 }
