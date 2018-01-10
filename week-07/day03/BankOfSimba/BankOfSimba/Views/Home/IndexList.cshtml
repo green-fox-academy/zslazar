@@ -6,10 +6,22 @@
     <title>Bank of Simba</title>
 </head>
 <body>
-    @foreach (var animals in @Model.AnimalList)
-    {
-        <p>@Model.AnimalList.IndexOf(animals)</p>
-    }
+    <table style="width:20%">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>AnimalType</th>
+        </tr>
+        @foreach (var animals in @Model.AnimalList)
+            {
+            <tr>
+                <td>@Model.AnimalList.IndexOf(animals)</td>
+                <td>@animals.Name</td>
+                <td>@animals.Balance</td>
+                <td>@animals.AnimalType</td>
+            </tr>
+                    }
 
 </body>
 </html>
