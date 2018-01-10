@@ -28,7 +28,8 @@ namespace BankOfSimba.ViewModels
                 Balance = 2000.00,
                 Currency = "Zebra",
                 AnimalType = "Lion",
-                Owner = true,                
+                Owner = true,
+                SoulType = true,
             });
 
             AnimalList.Add(new BankAccount()
@@ -38,6 +39,7 @@ namespace BankOfSimba.ViewModels
                 Currency = "Zebra",
                 AnimalType = "Lion",
                 Owner = false,
+                SoulType = true,
             });
 
             AnimalList.Add(new BankAccount()
@@ -47,6 +49,7 @@ namespace BankOfSimba.ViewModels
                 Currency = "Zebra",
                 AnimalType = "Lion",
                 Owner = false,
+                SoulType = false,
             });
         }
     }

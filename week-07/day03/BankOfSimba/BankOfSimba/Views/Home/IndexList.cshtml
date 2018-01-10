@@ -13,6 +13,7 @@
             <th>Balance</th>
             <th>AnimalType</th>
             <th>Owner</th>
+            <th>SoulType</th>
         </tr>
         @foreach (var animals in @Model.AnimalList)
             {
@@ -30,6 +31,15 @@
                     <td>@animals.Owner</td>
                 }
 
+                @switch (animals.SoulType)
+                {
+                    case true:
+                        <td>Good Guy</td>
+                        break;
+                    case false:
+                        <td>Bad Guy</td>
+                        break;
+                }
             </tr>
         }
     </table>

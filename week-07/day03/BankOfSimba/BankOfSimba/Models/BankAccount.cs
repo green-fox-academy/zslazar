@@ -12,6 +12,7 @@ namespace BankOfSimba.Models
         public string AnimalType { get; set; }
         public string Currency { get; set; }
         public bool Owner { get; set; }
+        public bool SoulType { get; set; }
 
         //part one
         //public BankAccount(string name, double balance, string type)
