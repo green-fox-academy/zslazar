@@ -12,6 +12,7 @@
             <th>Name</th>
             <th>Balance</th>
             <th>AnimalType</th>
+            <th>Owner</th>
         </tr>
         @foreach (var animals in @Model.AnimalList)
             {
@@ -20,6 +21,7 @@
                 <td>@animals.Name</td>
                 <td>@animals.Balance</td>
                 <td>@animals.AnimalType</td>
+                <td style="color:red">@animals.Owner</td>
             </tr>
                     }
 
