@@ -30,8 +30,8 @@
                 {
                     <td>@animals.Owner</td>
                 }
-
-                @switch (animals.SoulType)
+                                
+                @*@switch (animals.SoulType)
                 {
                     case true:
                         <td>Good Guy</td>
@@ -39,7 +39,17 @@
                     case false:
                         <td>Bad Guy</td>
                         break;
+                }*@
+
+                @if (animals.SoulType == true)
+                {
+                    <td>Good Guy</td>
                 }
+                else
+                {
+                    <td>Bad Guy</td>                    
+                }
+
             </tr>
         }
     </table>
