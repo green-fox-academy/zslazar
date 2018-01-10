@@ -21,9 +21,17 @@
                 <td>@animals.Name</td>
                 <td>@animals.Balance</td>
                 <td>@animals.AnimalType</td>
-                <td style="color:red">@animals.Owner</td>
-            </tr>
-                    }
+                @if (animals.Owner == true)
+                {
+                    <td style="color:darkgoldenrod">@animals.Owner</td>
+                }
+                else
+                {
+                    <td>@animals.Owner</td>
+                }
 
+            </tr>
+        }
+    </table>
 </body>
 </html>
