@@ -20,13 +20,30 @@ namespace BankOfSimba.Controllers
         //    BankAccount animalOne = new BankAccount("Simba", 2000, "lion");
         //    return View(animalOne);
         //}
-        
+
         public static AnimalViewModel animalVM = new AnimalViewModel();
 
         [HttpGet("list")]
         public IActionResult IndexList()
         {
             return View(animalVM);
+        }
+
+        [HttpPost("list")]
+        public IActionResult Balancer()
+        {
+            foreach (var animals in animalVM.AnimalList)
+            {
+                if (animals.Owner == true)
+                {
+                    animals.Balance += 100;
+                }
+                else
+                {
+                    animals.Balance += 10;
+                }
+            }
+            return RedirectToAction("IndexList");
         }
 
     }

@@ -21,7 +21,7 @@ namespace BankOfSimba.ViewModels
             //AnimalList.Add(new BankAccount("Simbaaaa", 2000.00, "lion"));
             //AnimalList.Add(new BankAccount("Nala", 2200, "lion"));
             //AnimalList.Add(new BankAccount("Rafiki", 5000, "monkey"));
-                        
+
             AnimalList.Add(new BankAccount()
             {
                 Name = "Simba",

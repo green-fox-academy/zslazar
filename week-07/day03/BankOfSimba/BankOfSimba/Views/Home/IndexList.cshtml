@@ -30,16 +30,16 @@
                 {
                     <td>@animals.Owner</td>
                 }
-                                
+
                 @*@switch (animals.SoulType)
-                {
-                    case true:
-                        <td>Good Guy</td>
-                        break;
-                    case false:
-                        <td>Bad Guy</td>
-                        break;
-                }*@
+                    {
+                        case true:
+                            <td>Good Guy</td>
+                            break;
+                        case false:
+                            <td>Bad Guy</td>
+                            break;
+                    }*@
 
                 @if (animals.SoulType == true)
                 {
@@ -47,11 +47,15 @@
                 }
                 else
                 {
-                    <td>Bad Guy</td>                    
+                    <td>Bad Guy</td>
                 }
-
             </tr>
         }
     </table>
+    <br />
+    <form action="/list" method="post">
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
 </html>
