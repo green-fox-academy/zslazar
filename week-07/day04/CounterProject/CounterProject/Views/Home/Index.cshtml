@@ -1,0 +1,18 @@
+﻿@model CounterProject.Models.Counter
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ClickCounter</title>
+   </head>
+<body>
+    @*<p>
+            Hello, this site was loaded @Model.ClickCounter times since last server start.
+        </p>*@
+    <form action="/add" method="post">
+        
+        <p>WebCounter @Model.ClickCounter</p>
+        <input type="submit" value="Click!">
+    </form>
+
+</body>
+</html>
