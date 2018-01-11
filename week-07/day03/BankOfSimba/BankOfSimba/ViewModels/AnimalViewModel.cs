@@ -1,8 +1,5 @@
-﻿using System;
+﻿using BankOfSimba.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BankOfSimba.Models;
 
 namespace BankOfSimba.ViewModels
 {
