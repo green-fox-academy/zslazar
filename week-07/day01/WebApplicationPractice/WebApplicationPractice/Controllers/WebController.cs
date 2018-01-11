@@ -12,8 +12,8 @@ namespace WebApplicationPractice.Controllers
     [Route("web")]
     public class WebController : Controller
     {
-        public static int Webcounter { get; set; } = 0;
-
+        //public static int Webcounter { get; set; } = 0;
+        private static long Id { get; set; }
 
         // GET: /<controller>/
         public IActionResult Index()
@@ -35,13 +35,14 @@ namespace WebApplicationPractice.Controllers
         //}
 
         [Route("greeting")]
-        public IActionResult Greeting([FromRoute] string name)
+        public IActionResult Greeting(string name)
         {           
             
             {
-                Webcounter++;
-                var hello = new Greeting(Webcounter, name);
-                return new JsonResult(hello);
+                //Webcounter++;
+                var hello = new Greeting(Id, name);
+                Id++;
+                return View(hello);
             };
 
         }

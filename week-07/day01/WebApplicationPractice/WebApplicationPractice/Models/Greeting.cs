@@ -22,12 +22,17 @@ namespace WebApplicationPractice.Models
         //{          
         //}
 
-        public Greeting(int Counter, string name)
-        {
-            Id = Counter;
-            Content = "Hello, " + name;
-        }
+        //public Greeting(int Counter, string name)
+        //{
+        //    Id = Counter;
+        //    Content = "Hello, " + name;
+        //}
 
+        public Greeting(long id, string name)
+        {
+            Content = name;
+            Id = id;
+        }
 
     }
 }
