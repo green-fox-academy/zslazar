@@ -7,7 +7,7 @@ namespace CounterProject.Models
 {
     public class Counter
     {
-        public long ClickCounter { get; set; } = 2;
+        public long ClickCounter { get; set; } = 1;
 
         //public CCounter(long clickcounter)
         //{
