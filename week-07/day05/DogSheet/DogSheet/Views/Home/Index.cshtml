@@ -1,0 +1,77 @@
+﻿@model DogSheet.ViewModels.DataViewModel
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DogSheet</title>
+    <link href="~/style.css" rel="stylesheet" />
+</head>
+<body style="background: url(../3997284.jpg)">
+    <table>
+        <tr>
+            <th>Handler</th>
+            <th>Dog</th>
+            <th>Specialization</th>
+            <th>Level</th>
+            <th>Score</th>
+        </tr>
+        @foreach (var item in @Model.Participants)
+        {
+            <tr>
+                <td>@item.Handler</td>
+                <td>@item.Dog</td>
+                <td>@item.Specialization</td>
+                <td>@item.Level</td>
+                @if (item.Score > 70)
+                {
+                    <td style="color:darkgoldenrod">@item.Score</td>
+                }
+                else
+                {
+                    <td>@item.Score</td>
+                }
+            </tr>
+        }
+    </table>
+    <br />
+    <form action="/add" method="post">
+        Handler:<br />
+        <input type="text" name="Handler" value="">
+        <br />
+        <br />
+        Dog:<br />
+        <input type="text" name="Dog" value="">
+        <br />
+        <br />
+        Specialization:<br />
+        <select name="Specialization">
+            <option value="">- Choose an option -</option>
+            <option value="Skills">Skills</option>
+            <option value="Obedience">Obedience</option>
+            <option value="Tracking">Tracking</option>
+            <option value="Protection">Protection</option>
+        </select>
+        <br />
+        <br />
+        Level:<br />
+        <select name="Level">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <br />
+        <br />
+        Score:<br />
+        <input type="text" name="Score" value="">
+        <br />
+        <br />
+        <input type="submit" value="Add new">
+    </form>
+</body>
+</html>
