@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using ListingTodos.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 namespace ListingTodos
 {
@@ -18,6 +19,8 @@ namespace ListingTodos
         {
             services.AddMvc();
             services.AddSingleton<TodoRepository>();
+            services.AddDbContext<TodoContext>(options =>
+            options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

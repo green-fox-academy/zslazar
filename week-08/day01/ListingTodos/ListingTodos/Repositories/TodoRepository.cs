@@ -7,12 +7,12 @@ namespace ListingTodos.Repositories
 {
     public class TodoRepository
     {
-        //public TodoContext todoContext;
+        public TodoContext todoContext;
 
-        //public TodoRepository(TodoContext todoContext)
-        //{
-        //    this.todoContext = todoContext;
-        //}
+        public TodoRepository(TodoContext todoContext)
+        {
+            this.todoContext = todoContext;
+        }
 
         public List<Todo> todoList = new List<Todo>()
         {
