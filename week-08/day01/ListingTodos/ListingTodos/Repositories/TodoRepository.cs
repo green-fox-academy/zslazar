@@ -27,6 +27,20 @@ namespace ListingTodos.Repositories
             return todoContext.Todos.ToList();
         }
 
+        public List<Todo> ReturnActiveList()
+        {
+            return todoContext.Todos.Where(t => t.IsDone == false).ToList();
+        }
+
+        public List<Todo> BoolList(bool isActive)
+        {
+            if (isActive)
+            {
+                return ReturnActiveList();
+            }
+            return ReturnList();
+        }
+
         //public TodoRepository()
         //{
         //    InitTodos();

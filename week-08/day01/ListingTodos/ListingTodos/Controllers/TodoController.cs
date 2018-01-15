@@ -25,15 +25,19 @@ namespace ListingTodos.Controllers
             return View();
         }
 
-        [Route("")]
+        
         [HttpGet("list")]
-        public IActionResult List()
+        public IActionResult List(bool isActive)
         {
             //var text = "This is my first todo";
             //return Json(text);
 
             //return View(repo.todoList);
-            return View(repo.ReturnList());
+            return View(repo.BoolList(isActive));
         }
+
+        
+            //return View(repo.ReturnActiveList());
+        
     }
 }
