@@ -22,6 +22,11 @@ namespace ListingTodos.Repositories
             new Todo() { Title = "Create a CRUD project" }
         };
 
+        public List<Todo> ReturnList()
+        {
+            return todoContext.Todos.ToList();
+        }
+
         //public TodoRepository()
         //{
         //    InitTodos();

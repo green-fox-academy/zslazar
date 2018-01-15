@@ -18,7 +18,7 @@ namespace ListingTodos
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddSingleton<TodoRepository>();
+            services.AddScoped<TodoRepository>();
             services.AddDbContext<TodoContext>(options =>
             options.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
         }

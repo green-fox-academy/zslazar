@@ -12,7 +12,6 @@ namespace ListingTodos.Controllers
     [Route("")]
     public class TodoController : Controller
     {
-
         private TodoRepository repo;
 
         public TodoController(TodoRepository repo)
@@ -33,8 +32,8 @@ namespace ListingTodos.Controllers
             //var text = "This is my first todo";
             //return Json(text);
 
-            return View(repo.todoList);
-
+            //return View(repo.todoList);
+            return View(repo.ReturnList());
         }
     }
 }
