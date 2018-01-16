@@ -19,15 +19,15 @@ namespace ListingTodos.Controllers
             this.repo = repo;
         }
                
-        [HttpGet("todo")]
+        [HttpGet("/todo")]
         public IActionResult Index()
         {
-            return View();
+            return View("List", repo.ReturnList());
         }
 
-        
-        [HttpGet("list")]
-        public IActionResult List(bool isActive)
+
+        [Route("/list")]
+        public IActionResult List([FromQuery]bool isActive)
         {
             //var text = "This is my first todo";
             //return Json(text);
@@ -36,8 +36,25 @@ namespace ListingTodos.Controllers
             return View(repo.BoolList(isActive));
         }
 
-        
-            //return View(repo.ReturnActiveList());
-        
+        [HttpGet("/todo/add")]
+        public IActionResult ViewAddForm()
+        {
+            return View("Add");
+        }
+
+        [HttpPost("/todo/add")]
+        public IActionResult CreateListElement(Todo todo)
+        {
+            repo.CreateNewItem(todo);
+            return Redirect("/todo");            
+        }
+
+
+        [HttpGet("/delete/{id}")]
+        public IActionResult Delete(long id)
+        {
+            repo.DeleteItem(id);
+            return RedirectToAction("List");            
+        }
     }
 }

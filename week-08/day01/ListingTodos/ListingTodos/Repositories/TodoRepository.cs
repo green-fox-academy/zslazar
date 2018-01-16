@@ -41,6 +41,20 @@ namespace ListingTodos.Repositories
             return ReturnList();
         }
 
+        public void CreateNewItem(Todo todo)
+        {
+            todoContext.Todos.Add(todo);
+            todoContext.SaveChanges();
+        }
+
+        public void DeleteItem(long index)
+        {
+            Todo t = todoContext.Todos.FirstOrDefault(x => x.Id == index);
+            todoContext.Todos.Remove(t);
+            todoContext.SaveChanges();
+        }
+
+        
         //public TodoRepository()
         //{
         //    InitTodos();
