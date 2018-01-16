@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ListingTodos.Repositories
 {
@@ -54,7 +52,19 @@ namespace ListingTodos.Repositories
             todoContext.SaveChanges();
         }
 
-        
+        public Todo GetItem(long index)
+        {
+            return todoContext.Todos.FirstOrDefault(x => x.Id == index);
+        }
+
+        public void EditItem(Todo todo, long index)
+        {
+            Todo t = todoContext.Todos.FirstOrDefault(x => x.Id == index);
+            t.Title = todo.Title;
+            t.IsDone = todo.IsDone;
+            t.IsUrgent = todo.IsUrgent;
+            todoContext.SaveChanges();
+        }
         //public TodoRepository()
         //{
         //    InitTodos();

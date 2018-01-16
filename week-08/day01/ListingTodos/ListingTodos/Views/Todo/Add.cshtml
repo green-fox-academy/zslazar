@@ -1,25 +1,29 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model List<ListingTodos.Todo>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Create New ToDo</title>
 </head>
 <body>
-    <h1>Add New ToDo</h1>
+    <h2>Add New ToDo</h2>
     <form action="/todo/add" method="post">
         <p>Title:</p>
         <input type="text" name="Title" value="">
         <br />
         <br />
-        <p>IsDone</p>
+        <p>Done?</p>
         <select type="text" name="IsDone">
+            <option value="">- Choose -</option>
             <option value=true>Is Done</option>
             <option value=false>Is Not Done</option>
         </select>
-        <p>IsUrgent</p>
+        <p>Urgent?</p>
         <select type="text" name="IsUrgent">
+            <option value="">- Choose -</option>
             <option value=true>Important</option>
             <option value=false>Not Important</option>
         </select>
-        <input type="submit" value="Add new list element">
+        <br /><br />
+        <input type="submit" value="Add new element">
     </form>
 </body>
 </html>
