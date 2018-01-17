@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ListingTodos.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace ListingTodos
         {
         }
 
-        public DbSet<Todo> Todos { get; set; }                
+        public DbSet<Todo> Todos { get; set; }    
+        public DbSet<User> Users { get; set; }
     }
 }

@@ -11,8 +11,8 @@ using System;
 namespace ListingTodos.Migrations
 {
     [DbContext(typeof(TodoContext))]
-    [Migration("20180115141434_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20180117161216_usertable")]
+    partial class usertable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,10 +21,26 @@ namespace ListingTodos.Migrations
                 .HasAnnotation("ProductVersion", "2.0.1-rtm-125")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ListingTodos.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("Email");
+
+                    b.Property<int>("Name");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("ListingTodos.Todo", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Date");
 
                     b.Property<bool>("IsDone");
 
@@ -32,9 +48,20 @@ namespace ListingTodos.Migrations
 
                     b.Property<string>("Title");
 
+                    b.Property<int?>("userId");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("userId");
+
                     b.ToTable("Todos");
+                });
+
+            modelBuilder.Entity("ListingTodos.Todo", b =>
+                {
+                    b.HasOne("ListingTodos.Models.User", "user")
+                        .WithMany()
+                        .HasForeignKey("userId");
                 });
 #pragma warning restore 612, 618
         }
