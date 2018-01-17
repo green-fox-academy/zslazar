@@ -1,0 +1,46 @@
+﻿@model List<ListingTodos.Todo>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ToDo CRUD app</title>
+</head>
+<body>
+    @*<h2>ToDos for today</h2>
+        @{
+            foreach (var item in Model)
+            {
+                <li>@item.Title</li>
+            }
+        }*@
+    <h1>Todos for today</h1>
+    <p><a href="/todo/add">Add new todo</a></p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>IsDone</th>
+                <th>IsUrgent</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Model.IndexOf(item)</td>
+                        <td>@item.Title</td>
+                        <td>@item.IsDone</td>
+                        <td>@item.IsUrgent</td>
+                        <td><a href="/@item.Id/delete/">Delete</a></td>
+                        <td><a href="/@item.Id/edit/">Edit</a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+
