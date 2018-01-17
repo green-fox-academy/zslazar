@@ -9,7 +9,7 @@ namespace ListingTodos.Models
     public class User
     {
         //[Key]
-        public int Id { get; set; }
+        public int UserId { get; set; }
         public int Name { get; set; }
         public int Email { get; set; }
 
