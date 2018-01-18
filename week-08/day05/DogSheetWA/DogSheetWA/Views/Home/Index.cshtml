@@ -1,12 +1,36 @@
-﻿@model DogSheetWA.Models.Sheet
+﻿@model List<DogSheetWA.Models.Sheet>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>DogSheet</title>
 </head>
-    <body>
-        <h1>Posts</h1>
-        
-    </body>
+<body>
+    <h1>Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Handler</th>
+                <th>Dog</th>
+                <th>Specialization</th>
+                <th>Level</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Model.IndexOf(item)</td>
+                    <td>@item.Handler</td>
+                    <td>@item.Dog</td>
+                    <td>@item.Specialization</td>
+                    <td>@item.Level</td>
+                    <td>@item.Score</td>
+                </tr>
+            }
+        </tbody>
+</table>
+</body>
 </html>
