@@ -19,12 +19,24 @@ namespace DogSheetWA.Controllers
             this.dogRepository = dogRepository;
         }
 
-        [HttpGet("/index")]
+        //[HttpGet("/index")]
+        //public IActionResult Index()
+        //{
+        //    return View(dogRepository.ReturnList());
+        //}
+
+        [HttpGet("/")]
         public IActionResult Index()
         {
-            return View(dogRepository.ReturnList());
+            return Redirect("/results");
         }
 
-        
+        [HttpGet("/results")]
+        public IActionResult Result()
+        {
+            return View("Index", dogRepository.ReturnList());
+        }
+
+
     }
 }
