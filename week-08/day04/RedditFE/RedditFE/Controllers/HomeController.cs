@@ -9,13 +9,21 @@ using RedditFE.Repositories;
 
 namespace RedditFE.Controllers
 {
+    [Route("")]
     public class HomeController : Controller
     {
         private HomeRepository homeRepository;
 
+        public HomeController(HomeRepository homeRepository)
+        {
+            this.homeRepository = homeRepository;
+        }
+
+
         [HttpGet("index")]
         public IActionResult Index()
         {
+            //return View(homeRepository.ReturnList());
             return View();
         }
     }

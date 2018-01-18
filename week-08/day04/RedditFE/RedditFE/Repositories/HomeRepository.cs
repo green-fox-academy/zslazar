@@ -1,4 +1,5 @@
 ﻿using RedditFE.Entities;
+using RedditFE.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,11 @@ namespace RedditFE.Repositories
         public HomeRepository(HomeContext homeContext)
         {
             this.homeContext = homeContext;
+        }
+
+        public List<RedditPost> ReturnList()
+        {
+            return homeContext.RedditPosts.ToList();
         }
 
     }

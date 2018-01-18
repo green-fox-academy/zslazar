@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using RedditFE.Repositories;
+using RedditFE.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace RedditFE
 {
@@ -16,6 +19,8 @@ namespace RedditFE
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddScoped<HomeRepository>();
+            services.AddDbContext<HomeContext>(options => options.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = master; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -26,6 +31,8 @@ namespace RedditFE
                 app.UseDeveloperExceptionPage();
                 app.UseMvcWithDefaultRoute();
             }
+
+            app.UseMvc();
 
             app.Run(async (context) =>
             {
