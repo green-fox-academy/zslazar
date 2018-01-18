@@ -22,7 +22,7 @@ namespace DogSheetWA.Controllers
         [HttpGet("index")]
         public IActionResult Index()
         {
-            return View();
+            return View(dogRepository.ReturnList());
         }
     }
 }

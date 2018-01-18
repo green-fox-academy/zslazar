@@ -5,14 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DogSheetWA.Entities
+namespace DogSheetWA
 {
     public class DogContext : DbContext
     {
-        public DogContext(DbContextOptions options) : base(options)
+        public DogContext(DbContextOptions<DogContext> options) : base(options)
         {
         }
 
-        //public DbSet<Sheet> SheetData { get; set; }
+        public DbSet<Sheet> SheetData { get; set; }
     }
 }

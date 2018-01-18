@@ -20,6 +20,8 @@ namespace DogSheetWA
         {
             services.AddMvc();
             services.AddScoped<DogRepository>();
+            services.AddDbContext<DogContext>(options =>
+            options.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = DogData; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,9 +34,7 @@ namespace DogSheetWA
                 app.UseStaticFiles();
             }
 
-            app.UseMvc();
-
-            
+            app.UseMvc();                        
         }
     }
 }

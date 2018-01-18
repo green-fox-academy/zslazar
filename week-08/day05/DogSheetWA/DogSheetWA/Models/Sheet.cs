@@ -15,4 +15,6 @@ namespace DogSheetWA.Models
         public double Level { get; set; }
         public double Score { get; set; }
     }
+
+    
 }

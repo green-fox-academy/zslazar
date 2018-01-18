@@ -1,4 +1,4 @@
-﻿using DogSheetWA.Entities;
+﻿using DogSheetWA.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +13,11 @@ namespace DogSheetWA.Repositories
         public DogRepository(DogContext dogContext)
         {
             this.dogContext = dogContext;
+        }
+        
+        public List<Sheet> ReturnList()
+        {
+            return dogContext.SheetData.ToList();
         }
     }
 }
