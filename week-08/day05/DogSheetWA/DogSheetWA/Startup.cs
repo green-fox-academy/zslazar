@@ -31,9 +31,9 @@ namespace DogSheetWA
             {
                 app.UseDeveloperExceptionPage();
                 app.UseMvcWithDefaultRoute();
-                app.UseStaticFiles();
             }
 
+            app.UseStaticFiles();
             app.UseMvc();                        
         }
     }
