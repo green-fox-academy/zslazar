@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using DogSheetWA.Models;
 
@@ -14,7 +13,5 @@ namespace DogSheetWA.Models
         public string Specialization { get; set; }
         public double Level { get; set; }
         public double Score { get; set; }
-    }
-
-    
+    }    
 }

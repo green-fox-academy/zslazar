@@ -19,5 +19,21 @@ namespace DogSheetWA.Repositories
         {
             return dogContext.SheetData.ToList();
         }
+
+        public void CreateNewItem(Sheet sheet)
+        {
+            dogContext.SheetData.Add(sheet);
+            dogContext.SaveChanges();
+        }
+
+        public void DeleteItem(long index)
+        {
+            Sheet data = dogContext.SheetData.FirstOrDefault(x => x.Id == index);
+            dogContext.SheetData.Remove(data);
+            dogContext.SaveChanges();
+        }
+
+
+
     }
 }

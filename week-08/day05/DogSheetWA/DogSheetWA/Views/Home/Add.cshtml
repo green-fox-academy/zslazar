@@ -1,4 +1,52 @@
-﻿<!DOCTYPE html>
+﻿@model List<DogSheetWA.Models.Sheet>
+
+<!DOCTYPE html>
+<html>
 <head>
     <title>Add</title>
 </head>
+<body>
+    <h2>Add new result</h2>
+    <form action="/add" method="post">
+        <p>Dog</p>
+        <input type="text" name="Dog" value="">
+        <br />
+        <br />
+        <p>Handler</p>
+        <input type="text" name="Handler" value="">
+        <br />
+        <br />
+        <p>Level</p>
+        <select name="Level">
+            <option value=""></option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+        <br />
+        <br />
+        <p>Score</p>
+        <input type="text" name="Score" value="">
+        <br />
+        <br />
+        <p>Specialization</p>
+        <select name="Specialization">
+            <option value="">- Choose an option -</option>
+            <option value="Skills">Skills</option>
+            <option value="Obedience">Obedience</option>
+            <option value="Tracking">Tracking</option>
+            <option value="Protection">Protection</option>
+        </select>
+        <br />
+        <br />
+        <input type="submit" value="Add">
+        <p><a href="/results">Cancel</a></p>
+    </form>
+</body>
+</html>

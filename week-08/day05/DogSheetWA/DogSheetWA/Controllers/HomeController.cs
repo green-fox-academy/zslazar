@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using DogSheetWA.Repositories;
+using DogSheetWA.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -37,6 +38,26 @@ namespace DogSheetWA.Controllers
             return View("Index", dogRepository.ReturnList());
         }
 
+        [HttpGet("/add")]
+        public IActionResult ViewAddForm()
+        {
+            return View("Add");
+        }
+
+        [HttpPost("/add")]
+        public IActionResult CreateNewElement(Sheet sheet)
+        {
+            dogRepository.CreateNewItem(sheet);
+            return Redirect("/results");
+        }
+
+        //Ha id van az URL-ben, akkor azt kell paraméterbe is beadni
+        [HttpGet("/{id}/delete")]
+        public IActionResult Delete(long id)
+        {
+            dogRepository.DeleteItem(id);
+            return RedirectToAction("Index");
+        }
 
     }
 }
