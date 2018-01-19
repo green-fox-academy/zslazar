@@ -1,0 +1,48 @@
+﻿@model List<DogSheetWA.Models.Sheet>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DogSheet</title>
+</head>
+<body>
+    <h1>Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Handler</th>
+                <th>Dog</th>
+                <th>Specialization</th>
+                <th>Level</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Model.IndexOf(item)</td>
+                    <td>@item.Handler</td>
+                    <td>@item.Dog</td>
+                    <td>@item.Specialization</td>
+                    <td>@item.Level</td>
+                    @if (item.Score > 69)
+                    {
+                        <td style="color:darkgoldenrod">@item.Score</td>
+                    }
+                    else
+                    {
+                        <td>@item.Score</td>
+                    }
+                    <td><a href="/@item.Id/delete/">Delete</a></td>
+                    <td><a href="/@item.Id/edit/">Edit</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <br />
+    <p><a href="/add">Add new result</a></p>
+</body>
+</html>
