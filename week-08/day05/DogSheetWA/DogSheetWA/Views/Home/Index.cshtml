@@ -7,23 +7,26 @@
     <title>DogSheet</title>
 </head>
 <body>
-    <h1>Results</h1>
-    <table>
-        <thead>
+    <h1 class="text-center">Results</h1>
+    <br />
+    <table class="table table-striped">
+        <thead class="thead-dark">
             <tr>
-                <th>ID</th>
-                <th>Handler</th>
-                <th>Dog</th>
-                <th>Specialization</th>
-                <th>Level</th>
-                <th>Score</th>
+                <th scope="col">ID</th>
+                <th scope="col">Handler</th>
+                <th scope="col">Dog</th>
+                <th scope="col">Specialization</th>
+                <th scope="col">Level</th>
+                <th scope="col">Score</th>
+                <th scope="col">xXx</th>
+                <th scope="col">O</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@Model.IndexOf(item)</td>
+                    <th scope="row">@Model.IndexOf(item)</th>
                     <td>@item.Handler</td>
                     <td>@item.Dog</td>
                     <td>@item.Specialization</td>
@@ -44,7 +47,7 @@
     </table>
     <br />
     <br />
-    <p><a href="/add">Add new result</a></p>
+    <p class="font-weight-bold"><a href="/add">Add new result</a></p>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
