@@ -27,7 +27,14 @@
                     <td>@item.Dog</td>
                     <td>@item.Specialization</td>
                     <td>@item.Level</td>
-                    <td>@item.Score</td>
+                    @if (item.Score > 69)
+                    {
+                        <td style="color:darkgoldenrod">@item.Score</td>
+                    }
+                    else
+                    {
+                        <td>@item.Score</td>
+                    }
                     <td><a href="/@item.Id/delete/">Delete</a></td>
                     <td><a href="/@item.Id/edit/">Edit</a></td>
                 </tr>
