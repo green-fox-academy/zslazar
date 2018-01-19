@@ -33,7 +33,20 @@ namespace DogSheetWA.Repositories
             dogContext.SaveChanges();
         }
 
+        public Sheet GetItem(long index)
+        {
+            return dogContext.SheetData.FirstOrDefault(x => x.Id == index);
+        }
 
-
+        public void EditItem(Sheet sheet, long index)
+        {
+            Sheet data = dogContext.SheetData.FirstOrDefault(x => x.Id == index);
+            data.Handler = sheet.Handler;
+            data.Dog = sheet.Dog;
+            data.Specialization = sheet.Specialization;
+            data.Level = sheet.Level;
+            data.Score = sheet.Score;
+            dogContext.SaveChanges();
+        }
     }
 }

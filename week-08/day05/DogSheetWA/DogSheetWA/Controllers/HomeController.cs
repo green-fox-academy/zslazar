@@ -59,5 +59,17 @@ namespace DogSheetWA.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet("/{id}/edit")]
+        public IActionResult Edit(long id)
+        {
+            return View(dogRepository.GetItem(id));
+        }
+
+        [HttpPost("/{id}/edit")]
+        public IActionResult Modify(Sheet data, long id)
+        {
+            dogRepository.EditItem(data, id);
+            return Redirect("/results");
+        }
     }
 }
