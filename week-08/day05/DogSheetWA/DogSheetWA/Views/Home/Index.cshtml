@@ -4,9 +4,10 @@
 <html>
 <head>
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <title>DogSheet</title>
 </head>
-<body>
+<body style="margin: 30px">
     <h1 class="text-center">Results</h1>
     <br />
     <table class="table table-striped">
@@ -18,8 +19,9 @@
                 <th scope="col">Specialization</th>
                 <th scope="col">Level</th>
                 <th scope="col">Score</th>
-                <th scope="col">xXx</th>
-                <th scope="col">O</th>
+                @*<th scope="col">Delete</th>*@
+                <th scope="col">Remove</th>
+                <th scope="col">Edit</th>
             </tr>
         </thead>
         <tbody>
@@ -39,15 +41,16 @@
                     {
                         <td>@item.Score</td>
                     }
-                    <td><a href="/@item.Id/delete/">Delete</a></td>
-                    <td><a href="/@item.Id/edit/">Edit</a></td>
+                    @*<td><a href="/@item.Id/delete/"><span class="glyphicon glyphicon-trash"></span></a></td>*@
+                    <td><a href="/@item.Id/delete/" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove"></span></a></td>
+                    <td><a href="/@item.Id/edit/" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-edit"></span></a></td>
                 </tr>
             }
         </tbody>
     </table>
     <br />
     <br />
-    <p class="font-weight-bold"><a href="/add">Add new result</a></p>
+    <p><a href="/add" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-plus-sign"> Add</span></a></p>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>

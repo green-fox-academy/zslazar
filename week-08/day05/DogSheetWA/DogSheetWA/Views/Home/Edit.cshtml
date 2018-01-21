@@ -6,7 +6,7 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <title>Edit</title>
 </head>
-<body>
+<body style="margin: 5% 25% 10% 25%">
     <h2 class="text-center">Edit Data</h2>
     <form action="/@Model.Id/edit" method="post">
         <div class="form-group">
@@ -51,9 +51,19 @@
             <label for="Score">Score</label>
             <input type="text" class="form-control" name="Score" value="">
         </div>
-        <button type="submit" class="btn btn-primary my-1" value="OK">Submit</button>
-        <br /><br />
-        <p class="font-weight-bold"><a href="/results">Cancel</a></p>
+        @*<button type="submit" class="btn btn-primary my-1" value="OK">Submit</button>
+            <br /><br />
+            <p class="font-weight-bold"><a href="/results">Cancel</a></p>*@
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-dark" value="OK">Submit</button>
+            </div>
+            <div class="col">
+                <div class="text-right">
+                    <a href="/results" class="btn btn-light" role="button">Cancel</a>
+                </div>
+            </div>
+        </div>
     </form>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
