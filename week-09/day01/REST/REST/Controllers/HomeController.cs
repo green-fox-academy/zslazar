@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using REST.Models;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -85,6 +86,49 @@ namespace REST.Controllers
             return Json(new { appended = appendable + "a" });
             
             //return Json(new { appended = $"{word} + a" });
+        }
+
+        /* Create a dynamic POST /dountil/{what} endpoint That receives a number in a json object:
+        {
+          "until": 15
+        }
+        and responds with sum or multiplication of all elements until that number:
+        eg. /dountil/sum with {"until": 5} will respond {"result": 15}
+        eg. /dountil/factor with {"until": 5} will respond {"result": 120}
+        if no number is provided:
+        {
+          "error": "Please provide a number!"
+        }*/
+
+        [HttpPost("/dountil/{what}")]
+        public IActionResult DoUntil([FromBody] Item item, [FromRoute] string what)
+        {
+            if (item == null)
+            {
+            return Json(new { error = "Please provide a number!" });
+            }
+            if (what.Equals("sum"))
+            //if (what == "sum")
+            {
+                int result = 0;
+                for (int i = 1; i < item.Until + 1; i++)
+                {
+                    result += i;
+                }
+                return Json(new { result = result });
+            }
+            if (what.Equals("factor"))
+            //if (what == "factor")
+            {
+                int result = 1;
+                for (int i = 1; i < item.Until + 1; i++)
+                {
+                    result *= i;
+                }
+                return Json(new { result = result });
+            }
+            return NotFound();
+
         }
     }
 }
