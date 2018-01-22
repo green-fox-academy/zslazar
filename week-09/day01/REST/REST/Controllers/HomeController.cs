@@ -33,6 +33,18 @@ namespace REST.Controllers
         {
           "error": "Please provide an input!"
         }*/
-                
+
+        // /api/home/doubling?input=6
+        [HttpGet("doubling")]
+        public IActionResult Doubling(int? input)
+        {
+            if (input == null)
+            {
+                return Json(new { error = "Please provide an input!" });
+            }
+            return Json(new { received = input, result = input * 2 });
+                       
+        }
+
     }
 }
