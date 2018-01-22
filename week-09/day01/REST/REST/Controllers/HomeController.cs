@@ -35,6 +35,7 @@ namespace REST.Controllers
         }*/
 
         // /api/home/doubling?input=6
+        //http://localhost:52838/doubling?input=72
         [HttpGet("doubling")]
         public IActionResult Doubling(int? input)
         {
