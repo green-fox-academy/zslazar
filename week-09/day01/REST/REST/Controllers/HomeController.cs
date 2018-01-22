@@ -76,7 +76,8 @@ namespace REST.Controllers
         }
         if no appendable is provided, thats a different endpoint so the server should respond with 404 */
 
-        [HttpGet("/appenda/{appendable}")]
+        //http://localhost:52838/appenda/kuty
+        [HttpGet("appenda/{appendable}")]
         public IActionResult AppendA([FromRoute] string appendable)
         {
             if (appendable == null)
@@ -100,7 +101,7 @@ namespace REST.Controllers
           "error": "Please provide a number!"
         }*/
 
-        [HttpPost("/dountil/{what}")]
+        [HttpPost("dountil/{what}")]
         public IActionResult DoUntil([FromBody] Item item, [FromRoute] string what)
         {
             if (item == null)
