@@ -9,14 +9,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace REST.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("")]
     public class HomeController : Controller
     {
         //Create a HomeController with a single endpoint to /
         //The method should return File("index.html", "text/html") here
 
         
-        [HttpGet("")]
+        [HttpGet("/")]
         public IActionResult GetFile()
         {
             return File("index.html", "text/html");
