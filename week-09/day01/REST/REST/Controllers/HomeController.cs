@@ -53,6 +53,7 @@ namespace REST.Controllers
           "error": "Please provide a name!"
         }  */
 
+        //http://localhost:52838/greeter?name=Zsuska&title=student
         [HttpGet("greeter")]
         public IActionResult Greeter([FromQuery] string name, [FromQuery] string title)
         {
@@ -66,5 +67,24 @@ namespace REST.Controllers
             }
             return Json(new { welcome_message = $"Oh, hi there {name}, my dear {title}!" });
             }
+
+        /* Create a dynamic GET /appenda/{appendable} endpoint that responds with the appended a: 
+         * eg. /appenda/kuty responds with:
+        {
+        "appended": "kutya"
+        }
+        if no appendable is provided, thats a different endpoint so the server should respond with 404 */
+
+        [HttpGet("/appenda/{appendable}")]
+        public IActionResult AppendA([FromRoute] string appendable)
+        {
+            if (appendable == null)
+            {
+                return NotFound();
+            }
+            return Json(new { appended = appendable + "a" });
+            
+            //return Json(new { appended = $"{word} + a" });
+        }
     }
 }
