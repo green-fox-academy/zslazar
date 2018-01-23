@@ -117,6 +117,8 @@ namespace REST.Controllers
 
         [HttpPost("dountil/{what}")]
         public IActionResult DoUntil([FromBody] Item item, [FromRoute] string what)
+        //lehetett volna ez is
+        //public IActionResult DoUntil([FromRoute]string what, int? item)
         {
             if (item != null)
             {
@@ -143,6 +145,12 @@ namespace REST.Controllers
             }
             return Json(new { error = "Please provide a number!" });
             //return NotFound();
+
+        }
+
+        [HttpPost("arrays")]
+        public IActionResult ArrayHandler()
+        {
 
         }
     }
