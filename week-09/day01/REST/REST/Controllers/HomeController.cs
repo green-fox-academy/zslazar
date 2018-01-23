@@ -67,7 +67,21 @@ namespace REST.Controllers
                 return Json(new { error = "Please provide a title!" });
             }
             return Json(new { welcome_message = $"Oh, hi there {name}, my dear {title}!" });
-            }
+        }
+
+        //solution 2
+        // {            
+        //    if (name != null && title != null)
+        //    {
+        //        return Json(new { welcome_message = $"Oh, hi there {name}, my dear {title}!" });
+        //    }
+        //    if (name == null)
+        //    {
+        //        return Json(new { error = "Please provide a name!" });
+        //    }
+        //    return Json(new { error = "Please provide a title!" });
+        //}
+
 
         /* Create a dynamic GET /appenda/{appendable} endpoint that responds with the appended a: 
          * eg. /appenda/kuty responds with:
@@ -104,31 +118,31 @@ namespace REST.Controllers
         [HttpPost("dountil/{what}")]
         public IActionResult DoUntil([FromBody] Item item, [FromRoute] string what)
         {
-            if (item == null)
+            if (item != null)
             {
+                if (what.Equals("sum"))
+                //if (what == "sum")
+                {
+                    int result = 0;
+                    for (int i = 1; i < item.Until + 1; i++)
+                    {
+                        result += i;
+                    }
+                    return Json(new { result = result });
+                }
+                if (what.Equals("factor"))
+                //if (what == "factor")
+                {
+                    int result = 1;
+                    for (int i = 1; i < item.Until + 1; i++)
+                    {
+                        result *= i;
+                    }
+                    return Json(new { result = result });
+                }
+            }
             return Json(new { error = "Please provide a number!" });
-            }
-            if (what.Equals("sum"))
-            //if (what == "sum")
-            {
-                int result = 0;
-                for (int i = 1; i < item.Until + 1; i++)
-                {
-                    result += i;
-                }
-                return Json(new { result = result });
-            }
-            if (what.Equals("factor"))
-            //if (what == "factor")
-            {
-                int result = 1;
-                for (int i = 1; i < item.Until + 1; i++)
-                {
-                    result *= i;
-                }
-                return Json(new { result = result });
-            }
-            return NotFound();
+            //return NotFound();
 
         }
     }
