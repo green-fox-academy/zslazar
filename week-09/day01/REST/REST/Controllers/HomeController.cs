@@ -116,9 +116,9 @@ namespace REST.Controllers
         }*/
 
         [HttpPost("dountil/{what}")]
-        public IActionResult DoUntil([FromBody] Item item, [FromRoute] string what)
+        public IActionResult DoUntil([FromRoute] string what, [FromBody] Item item)
         //lehetett volna ez is
-        //public IActionResult DoUntil([FromRoute]string what, int? item)
+        //public IActionResult DoUntil([FromRoute]string what, int item)
         {
             if (item != null)
             {
@@ -145,13 +145,44 @@ namespace REST.Controllers
             }
             return Json(new { error = "Please provide a number!" });
             //return NotFound();
-
         }
 
         [HttpPost("arrays")]
-        public IActionResult ArrayHandler()
+        public IActionResult ArrayHandler(string what, int[] numbers)
         {
+            if (what != null && numbers != null && numbers.Length != null)
+            {
+                if (what.Equals("sum"))
+                {
+                    int result = numbers.Sum();
+                    return Json(new { result = result});
+                }
 
+                if (what.Equals("multiply"))
+                {
+                    int result = 1;
+                    for (int i = 0; i < numbers.Length; i++)
+                    {
+                        result *= numbers[i];
+                    }
+                    return Json(new { result = result });
+                }
+
+                if (what.Equals("double"))
+                {
+                    for (int i = 0; i < numbers.Length; i++)
+                    {
+                        numbers[i] *= 2;
+                    }
+                    return Json(new { result = numbers });
+                }
+            }
+
+            if (what == null)
+            {
+                return Json(new { error = "Please provide an operation!" });
+            }
+            return Json(new { error = "Please provide a number!" });
         }
     }
 }
