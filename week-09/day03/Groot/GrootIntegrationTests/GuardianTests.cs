@@ -21,6 +21,7 @@ namespace GrootIntegrationTests
             Client = Server.CreateClient();
         }
 
+        //With giving a parameter the status is ok
         [Fact]
         public async Task IndexShouldReturnOkStatus()
         {
@@ -31,6 +32,7 @@ namespace GrootIntegrationTests
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
 
+        //the given respone is the same as expected
         [Fact]
         public async Task IndexShouldReturnOkStatusWithMessage()
         {
@@ -39,5 +41,26 @@ namespace GrootIntegrationTests
             //assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
+
+        //Without giving a parameter the status is not ok
+        [Fact]
+        public async Task IndexShouldReturnNotOkStatus()
+        {
+            var response = await Client.GetAsync("/groot");
+
+            string json = await response.Content.ReadAsStringAsync();
+            Assert.Equal("{\"error\":\"I am Groot!\"}", json);
+        }
+
+        //and the given error response is the same as expected
+        [Fact]
+        public async Task IndexShouldReturnNotOkStatusWithMessage()
+        {
+            var response = await Client.GetAsync("/groot?message=somemessage");
+
+            string json = await response.Content.ReadAsStringAsync();
+            Assert.Equal("{\"received\":\"somemessage\",\"translated\":\"I am Groot!\"}", json);
+        }
+
     }
 }
