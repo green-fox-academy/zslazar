@@ -17,6 +17,7 @@ namespace Groot.Controllers
         //    return View();
         //}
 
+        //http://localhost:53991/groot?message=Zsuska
         [HttpGet("groot")]
         public IActionResult Groot([FromQuery] string message)
         {
@@ -25,7 +26,8 @@ namespace Groot.Controllers
                 return Json(new { error = "I am Groot!" });
             }
             return Json(new { received = message, translated = "I am Groot!" });
-
         }
+
+
     }
 }
