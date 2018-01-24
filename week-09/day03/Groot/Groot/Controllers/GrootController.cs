@@ -23,7 +23,8 @@ namespace Groot.Controllers
         {
             if (message == null)
             {
-                return Json(new { error = "I am Groot!" });
+                //return Json(new { error = "I am Groot!" });
+                return BadRequest(new { error = "I am Groot!" });
             }
             return Json(new { received = message, translated = "I am Groot!" });
         }

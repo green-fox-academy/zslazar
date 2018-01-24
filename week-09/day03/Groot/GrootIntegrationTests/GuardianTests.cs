@@ -29,7 +29,8 @@ namespace GrootIntegrationTests
             var response = await Client.GetAsync("/groot");
 
             //assert
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            //Assert.Equal(HttpStatusCode.Ok, response.StatusCode);
+            Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
         }
 
         //the given respone is the same as expected
