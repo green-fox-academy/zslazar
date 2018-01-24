@@ -32,9 +32,12 @@ namespace GrootIntegrationTests
         }
 
         [Fact]
-        public void Test1()
+        public async Task IndexShouldReturnOkStatusWithMessage()
         {
+            var response = await Client.GetAsync("/groot?message=somemessage");
 
+            //assert
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
     }
 }
