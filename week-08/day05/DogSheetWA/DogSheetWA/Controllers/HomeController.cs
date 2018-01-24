@@ -22,11 +22,11 @@ namespace DogSheetWA.Controllers
         //    return View(dogRepository.ReturnList());
         //}
 
-        [HttpGet("/")]
-        public IActionResult Index()
-        {
-            return Redirect("/results");
-        }
+        //[HttpGet("/")]
+        //public IActionResult Index()
+        //{
+        //    return Redirect("/results");
+        //}
 
         [HttpGet("/results")]
         public IActionResult Result()
