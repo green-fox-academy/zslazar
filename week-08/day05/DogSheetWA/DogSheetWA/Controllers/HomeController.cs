@@ -52,7 +52,7 @@ namespace DogSheetWA.Controllers
         public IActionResult Delete(long id)
         {
             dogRepository.DeleteItem(id);
-            return RedirectToAction("Index");
+            return Redirect("/results");
         }
 
         [HttpGet("/{id}/edit")]
