@@ -11,10 +11,28 @@ namespace RedditBE.Controllers
     [Route("")]
     public class HomeController : Controller
     {
-        // GET: /<controller>/
-        public IActionResult Index()
+        [HttpGet("posts")]
+        public IActionResult Get()
         {
-            return View();
+            return Ok();
         }
+
+        [HttpPost("posts")]
+        public IActionResult Post()
+        {
+            return Ok();
+        }
+
+        [HttpPut("posts/{id}/upvote")]
+        public IActionResult Upvote()
+        {
+            return Ok();
+        }
+
+        [HttpPut("posts/{id}/downvote")]
+        public IActionResult Downvote()
+        {
+            return Ok();
+        }                
     }
 }
