@@ -13,7 +13,7 @@ namespace RedditBE.Entities
         {
         }
 
-        public DbSet<Post> SheetData { get; set; }
+        public DbSet<Post> Posts { get; set; }
 
     }
 }

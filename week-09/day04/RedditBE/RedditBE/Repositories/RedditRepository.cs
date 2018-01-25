@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace RedditBE.Repositories
 {
-    public class HomeRepository
+    public class RedditRepository
     {
-        private RedditContext homeContext;
+        private RedditContext redditContext;
                 
-        public HomeRepository(RedditContext homeContext)
+        public RedditRepository(RedditContext redditContext)
         {
-            this.homeContext = homeContext;
+            this.redditContext = redditContext;
         }
 
     }

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RedditBE.Models
 {
-    public class Users
+    public class User
     {
     }
 }
