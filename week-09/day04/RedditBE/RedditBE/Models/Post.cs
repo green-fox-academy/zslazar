@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace RedditBE.Models
 {
-    public class Posts
+    public class Post
     {
         public int Id { get; set; }
         public int Title { get; set; }

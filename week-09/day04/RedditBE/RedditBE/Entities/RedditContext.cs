@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace RedditBE.Entities
 {
-    public class HomeContext : DbContext
+    public class RedditContext : DbContext
     {
-        public HomeContext(DbContextOptions<HomeContext> options) : base(options)
+        public RedditContext(DbContextOptions<RedditContext> options) : base(options)
         {
         }
 
-        public DbSet<Posts> SheetData { get; set; }
+        public DbSet<Post> SheetData { get; set; }
 
     }
 }

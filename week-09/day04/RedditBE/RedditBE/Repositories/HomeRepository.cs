@@ -8,9 +8,9 @@ namespace RedditBE.Repositories
 {
     public class HomeRepository
     {
-        private HomeContext homeContext;
+        private RedditContext homeContext;
                 
-        public HomeRepository(HomeContext homeContext)
+        public HomeRepository(RedditContext homeContext)
         {
             this.homeContext = homeContext;
         }
