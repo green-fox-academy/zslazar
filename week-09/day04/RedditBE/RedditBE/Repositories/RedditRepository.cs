@@ -1,4 +1,6 @@
-﻿using RedditBE.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using RedditBE.Entities;
+using RedditBE.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +15,11 @@ namespace RedditBE.Repositories
         public RedditRepository(RedditContext redditContext)
         {
             this.redditContext = redditContext;
+        }
+
+        public DbSet<Post> GetAllPosts()
+        {
+            return redditContext.Posts;
         }
 
     }
