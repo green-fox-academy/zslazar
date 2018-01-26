@@ -8,9 +8,9 @@ namespace RedditBE.Models
     public class Post
     {
         public int Id { get; set; }
-        public int Title { get; set; }
-        public int Url { get; set; }
-        public int Timestamp { get; set; }
+        public string Title { get; set; }
+        public string Url { get; set; }
+        public DateTime Timestamp { get; set; } = DateTime.Now;
         public int Score { get; set; }
     }
 }

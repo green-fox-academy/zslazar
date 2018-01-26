@@ -22,5 +22,11 @@ namespace RedditBE.Repositories
             return redditContext.Posts;
         }
 
+        public Post Add(Post json)
+        {
+            redditContext.Posts.Add(json);
+            redditContext.SaveChanges();
+            return json;
+        }
     }
 }

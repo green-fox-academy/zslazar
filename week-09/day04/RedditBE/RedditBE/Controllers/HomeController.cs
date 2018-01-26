@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using RedditBE.Repositories;
+using RedditBE.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -22,13 +23,21 @@ namespace RedditBE.Controllers
         [HttpGet("")]
         public IActionResult Get()
         {
-            return Ok();
+            return Json(new { posts = redditRepository.GetAllPosts()});
         }
 
         [HttpPost("")]
-        public IActionResult Post()
-        {
-            return Ok();
+        public IActionResult Post([FromBody] Post json)
+        {                     
+            var addedPost = redditRepository.Add(json);
+            return Json(new
+            {
+                id = addedPost.Id,
+                title = addedPost.Title,
+                url = addedPost.Url,
+                timestamp = addedPost.Timestamp,
+                score = addedPost.Score
+            });
         }
 
         [HttpPut("{id}/upvote")]
