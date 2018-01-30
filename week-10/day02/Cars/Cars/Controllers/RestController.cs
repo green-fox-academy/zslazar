@@ -12,7 +12,6 @@ namespace Cars.Controllers
     [Route("api")]
     public class RestController : Controller
     {
-
         private CarService carService;
 
         public RestController(CarService carService)

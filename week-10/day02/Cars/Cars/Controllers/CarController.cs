@@ -20,7 +20,7 @@ namespace Cars.Controllers
         [HttpGet("search")]
         public IActionResult Search()
         {
-            return View();
+            return View("Search");
         }
 
         [HttpGet("search/{brand}")]
