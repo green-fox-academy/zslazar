@@ -38,7 +38,7 @@ namespace Cars.Repositories
 
         public List<LicencePlate> FilterBrand(string brand)
         {
-            return carContext.LicencePlates.Where(l => l.Plate.Equals(brand)).ToList();
+            return carContext.LicencePlates.Where(l => l.Brand.Equals(brand)).ToList();
         }
 
     }

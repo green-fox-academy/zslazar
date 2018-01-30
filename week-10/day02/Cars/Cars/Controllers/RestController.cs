@@ -20,9 +20,9 @@ namespace Cars.Controllers
         }
 
         [HttpGet ("search/{brand}")]
-        public IActionResult Index()
+        public IActionResult Search([FromRoute]string brand)
         {
-            return Json(new { });
+            return Json(new { result = "ok", data = carService.GetCarsByBrand(brand) });
         }
     }
 }
