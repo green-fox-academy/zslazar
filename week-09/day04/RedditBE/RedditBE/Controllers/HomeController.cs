@@ -32,6 +32,10 @@ namespace RedditBE.Controllers
             var addedPost = redditRepository.Add(json);
             return Json(new
             {
+                //vagy ez 
+                //post = addedPost
+                //vagy konkretan megadod milyen formatuma legyen:
+
                 id = addedPost.Id,
                 title = addedPost.Title,
                 url = addedPost.Url,
