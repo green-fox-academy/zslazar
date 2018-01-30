@@ -1,4 +1,5 @@
-﻿using Cars.Services;
+﻿using Cars.Models;
+using Cars.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -18,15 +19,15 @@ namespace Cars.Controllers
         }
 
         [HttpGet("search")]
-        public IActionResult Search()
+        public IActionResult Search([FromQuery]FilterOption filterOption)
         {
-            return View("Search");
+            return View(carService.GetFilteredList(filterOption));
         }
 
         [HttpGet("search/{brand}")]
-        public IActionResult SearchBrand()
+        public IActionResult SearchBrand(string brand)
         {
-            return View();
+            return View("Search", carService.GetCarsByBrand(brand));
         }
     }
 }
