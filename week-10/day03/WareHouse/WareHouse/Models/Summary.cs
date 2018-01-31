@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace WareHouse.Models
 {
-    public class Clothes
+    public class Summary
     {
-        public long Id { get; set; }
         public string ItemName { get; set; }
         public string Manufacturer { get; set; }
         public string Category { get; set; }
         public string Size { get; set; }
-        public double UnitPrice { get; set; }
+        public int Quantity { get; set; }
+        public double TotalPrice { get; set; }
     }
 }
