@@ -19,13 +19,13 @@ namespace WareHouse.Controllers
             this.clothesService = clothesService;
         }
 
-        [HttpGet("shoppingplanner")]
+        [HttpGet("warehouse")]
         public IActionResult Index()
         {
-            return View(clothesService.GetClothes());
+            return View(clothesService.GenerateVM());
         }
 
-        [HttpGet("shoppingplanner/summary")]
+        [HttpPost("warehouse/summary")]
         public IActionResult Summary()
         {
             return View();

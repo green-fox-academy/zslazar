@@ -1,4 +1,4 @@
-﻿@model List<WareHouse.Models.Clothes>
+﻿@model WareHouse.ViewModels.ClothesViewModel
 
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
             </tr>
         </thead>
         <tbody>
-            @{foreach (var item in @Model)
+            @{foreach (var item in Model.Clothes)
             {
                     <tr>
                         <td>@item.ItemName</td>
