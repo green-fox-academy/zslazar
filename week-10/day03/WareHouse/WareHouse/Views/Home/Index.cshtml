@@ -1,9 +1,37 @@
-﻿@model System.Collections.Generic.List<WareHouse.Models.Clothes>
+﻿@model List<WareHouse.Models.Clothes>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <title>CatWalk</title>
+    <meta charset="utf-8" />
 </head>
 <body>
+    <h1>GreenFox Fashion Web Store</h1>
+    <table>
+        <thead>
+            <tr>
+                <td>ItemName</td>
+                <td>Manufacturer</td>
+                <td>Category</td>
+                <td>Size</td>
+                <td>UnitPrice</td>
+            </tr>
+        </thead>
+        <tbody>
+            @{foreach (var item in @Model)
+            {
+                    <tr>
+                        <td>@item.ItemName</td>
+                        <td>@item.Manufacturer</td>
+                        <td>@item.Category</td>
+                        <td>@item.Size</td>
+                        <td>@item.UnitPrice</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
 </body>
 </html>
