@@ -43,5 +43,21 @@ namespace WareHouse.Services
 
             return clothesViewModel;
         }
+
+        public Summary GetSummary(string name, string size, int quantity)
+        {
+            var currentClothes = clothesRepository.GetNameAndSize(name, size);
+            Summary summary = new Summary
+            {
+                ItemName = currentClothes.ItemName,
+                Category = currentClothes.Category,
+                Manufacturer = currentClothes.Manufacturer,
+                Size = currentClothes.Size,
+                Quantity = quantity,
+                TotalPrice = currentClothes.UnitPrice * quantity
+            };
+
+            return summary;
+        }
     }
 }

@@ -9,12 +9,22 @@
 </head>
 <body>
     <h1>GreenFox Fashion Web Store</h1>
-    <form action="" method="">
+    <form action="/warehouse/summary" method="post">
         <select name="name">
             <option>Select item name</option>
+            @{foreach (var name in Model.ItemNames)
+                {
+                    <option value="@name">@name</option>
+                }
+            }
         </select>
         <select name="size">
             <option>Select size</option>
+            @{foreach (var size in Model.Sizes)
+                {
+                    <option value="@size">@size</option>
+                }
+            }
         </select>
         <input type="number" name="quantity" value="" />
         <button type="submit">GET TOTAL</button>

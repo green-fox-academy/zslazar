@@ -26,9 +26,9 @@ namespace WareHouse.Controllers
         }
 
         [HttpPost("warehouse/summary")]
-        public IActionResult Summary()
+        public IActionResult Summary(string name, string size, int quantity)
         {
-            return View();
+            return View(clothesService.GetSummary(name, size, quantity));
         }
     }
 }
