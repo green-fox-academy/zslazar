@@ -26,5 +26,24 @@ namespace WareHouse.Repositories
             return clothesContext.WarehouseDB.FirstOrDefault(x => x.ItemName.Equals(name) && x.Size.Equals(size));
         }
 
+        public List<Clothes> GetTypeDependOnPrice(double price, string type)
+        {
+            List<Clothes> FilteredList = new List<Clothes>();
+
+            if (type.Equals("lower"))
+            {
+                FilteredList = GetAllClothes().Where(f => f.UnitPrice < price).ToList();
+            }
+            else if (type.Equals("higher"))
+            {
+                FilteredList = GetAllClothes().Where(f => f.UnitPrice > price).ToList();
+            }
+            else if (type.Equals("equal"))
+            {
+                FilteredList = GetAllClothes().Where(f => f.UnitPrice == price).ToList();
+            }
+            return FilteredList;
+        }
+
     }
 }

@@ -32,7 +32,7 @@ namespace WareHouse.Services
             return clothesRepository.GetAllClothes().Select(n => n.ItemName).Distinct().OrderBy(n => n).ToList();
         }
 
-        public  ClothesViewModel GenerateVM()
+        public ClothesViewModel GenerateVM()
         {
             ClothesViewModel clothesViewModel = new ClothesViewModel
             {
@@ -58,6 +58,11 @@ namespace WareHouse.Services
             };
 
             return summary;
+        }
+
+        public List<Clothes> GetFilteredListByPrice(double price, string type)
+        {
+            return clothesRepository.GetTypeDependOnPrice(price, type);
         }
     }
 }

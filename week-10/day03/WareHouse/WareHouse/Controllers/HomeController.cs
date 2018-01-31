@@ -30,5 +30,11 @@ namespace WareHouse.Controllers
         {
             return View(clothesService.GetSummary(name, size, quantity));
         }
+
+        [HttpGet("warehouse/query")]
+        public IActionResult Query(double price, string type)
+        {
+            return Json(new { result = "ok", clothes = clothesService.GetFilteredListByPrice(price, type) });
+        }
     }
 }
