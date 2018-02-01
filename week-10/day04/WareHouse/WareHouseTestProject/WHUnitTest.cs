@@ -4,7 +4,8 @@ using System;
 using System.Net.Http;
 using Xunit;
 using WareHouse;
-
+using System.Threading.Tasks;
+using System.Net;
 
 namespace WareHouseTestProject
 {
@@ -20,9 +21,18 @@ namespace WareHouseTestProject
         }
 
         [Fact]
-        public void Test1()
+        public async Task LowerPriceQueryShouldReturnOkStatus()
         {
+            var response = await Client.GetAsync("/warehouse/query?price=50&type=lower");
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        }
 
+        [Fact]
+        public async Task HigherPriceQueryShouldReturnJson()
+        {
+            var response = await Client.GetAsync("/warehouse/query?price=50&type=higher");
+                        
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
     }
 }
