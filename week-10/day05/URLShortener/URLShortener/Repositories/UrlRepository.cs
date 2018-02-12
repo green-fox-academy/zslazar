@@ -27,12 +27,22 @@ namespace URLShortener.Repositories
             urlContext.SaveChanges();
         }
 
+        public Url GenerateNew(string addUrl)
+        {
+            Url url = new Url
+            {
+                LongUrl = addUrl
+            };
+            return url;
+        }
+
         //check if the submitted url contains the protocol (http or https)
         public string CheckHttps(string url)
         {
-            if (!url.Contains("https"))
+            string https = "https";
+
+            if (!url.Contains(https))
             {
-                string https = "https";
                 url = string.Concat(https, url);
                 return url;
             }
@@ -60,8 +70,8 @@ namespace URLShortener.Repositories
                 .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
-        //should have an endpoint /shorten which accepts a url parameter, eg. /shorten/r4nd0m
-        //searches for the url parameter in the database to get the original url
+        //ok - should have an endpoint /shorten which accepts a url parameter, eg. /shorten/r4nd0m
+        //ok - searches for the url parameter in the database to get the original url
         //redirects to the original url
         //redirects to the index page if not found
 
@@ -75,6 +85,15 @@ namespace URLShortener.Repositories
             //var shortie = urlContext.Urls.FirstOrDefault(s => s.ShortUrl == shortUrl).ToString();
                         
             return urlContext.Urls.Where(u => u.ShortUrl.Equals(shortUrl)).ToList();
+        }
+
+        public string AllTogether(Url url, string url2)
+        {            
+            CheckHttps(url2);
+            SearchLongUrl(url2);
+            Randomizer(url2);
+            return url2;
+
         }
     }
 }

@@ -28,6 +28,15 @@ namespace URLShortener.Controllers
         }
 
         //CheckHttps, CheckIfLongExsistInDb/SearchLongUrl Randomizer
+        [HttpGet("save")]
+        public IActionResult AddNewUrl(string url)
+        {
+            urlRepository.CheckHttps(url);
+            urlRepository.SearchLongUrl(url);
+            urlRepository.Randomizer(url);
+            return View();
+        }
+
         [HttpPost("save")]
         public IActionResult AddNewUrl(Url url)
         {
