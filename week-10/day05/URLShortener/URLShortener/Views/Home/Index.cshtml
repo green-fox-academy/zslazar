@@ -1,0 +1,30 @@
+﻿@model System.Collections.Generic.List<URLShortener.Models.Url>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>URLShortener</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h2>This is a URL shortener page</h2>
+    <form action="save" method="post">
+        <input type="text" name="LongUrl" value="" />
+        <button type="submit">Check / add </button>
+    </form>
+    <table border="1">
+        <tr>
+            <td><b>LooongUrls</b></td>
+            <td><b>Shorties</b></td>
+        </tr>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.LongUrl</td>
+                <td>@item.ShortUrl</td>
+            </tr>
+        }
+    </table>
+    <a href="/">Back to the old skool</a>
+</body>
+</html>
