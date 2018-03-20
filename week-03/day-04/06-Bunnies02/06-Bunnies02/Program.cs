@@ -13,7 +13,7 @@ namespace _06_Bunnies02
         {
             int ear = 2;
             int freakEar = ear + 1;
-            int bunnies = 8;
+            int bunnies = 4;
             Console.WriteLine(CountEar(bunnies, ear, freakEar));
             Console.ReadLine();
         }
