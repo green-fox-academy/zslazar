@@ -72,7 +72,7 @@ namespace CalAp
         {
             return new Event()
             {
-                Summary = "Mindfuck and learn",
+                Summary = "EventUpdate();",
                 Location = "Andrássy út 66, Budapest, 1062",
                 Description = "No chance.",
                 Start = new EventDateTime()
