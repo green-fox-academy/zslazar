@@ -26,11 +26,17 @@ namespace CalendarQuickstart
             CalendarService service = InitializeCalendarService();
             //var calendarHandler = new CalendarHandler(service);
             var calendarEventHandler = new CalendarEventHandler(service);
+            var calendarHandler = new CalendarHandler(service);
 
             //calendarEventHandler.GetEvents("primary");
             //calendarEventHandler.CreateEvent(calendarEventHandler.GenerateEvent(), "primary");
             //calendarEventHandler.DeleteEvent("primary", "f31umtjtvun4msldkmq8poacck");
             //calendarEventHandler.UpdateEvent(calendarEventHandler.GenerateEvent(), "primary", "no3m5085sv4ju67lqmbhu49tl0");
+
+            //calendarHandler.CreateCalendar();
+            //https://calendar.google.com/calendar/embed?src=9mfs64nfh4l3i1pq1sv1gajiho@group.calendar.google.com
+
+            calendarHandler.DeleteCalendar("9mfs64nfh4l3i1pq1sv1gajiho@group.calendar.google.com");
 
             Console.ReadLine();
         }
