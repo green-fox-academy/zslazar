@@ -100,8 +100,6 @@ namespace CalAp
                 }*/
             };
         }
-
-
     }
 }
 

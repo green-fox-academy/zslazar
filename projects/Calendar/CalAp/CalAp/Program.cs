@@ -29,9 +29,8 @@ namespace CalendarQuickstart
 
             //calendarEventHandler.GetEvents("primary");
             //calendarEventHandler.CreateEvent(calendarEventHandler.GenerateEvent(), "primary");
-            
             //calendarEventHandler.DeleteEvent("primary", "f31umtjtvun4msldkmq8poacck");
-            calendarEventHandler.UpdateEvent(calendarEventHandler.GenerateEvent(), "primary", "no3m5085sv4ju67lqmbhu49tl0");
+            //calendarEventHandler.UpdateEvent(calendarEventHandler.GenerateEvent(), "primary", "no3m5085sv4ju67lqmbhu49tl0");
 
             Console.ReadLine();
         }
