@@ -33,7 +33,7 @@ The student, on their own, is able to:
 * Use conditions and loops:
 	* [Filtering](https://github.com/greenfox-academy/zslazar/blob/master/week-02/day-01/Exercise18OddEven/Exercise18OddEven/Program.cs)
 	* Finding elements or [index](https://github.com/greenfox-academy/zslazar/blob/master/week-02/day-02/07-PrintThird/07-PrintThird/Program.cs)
-	* Generating lists
+	* [Generating lists](https://github.com/greenfox-academy/zslazar/blob/master/week-02/day-03/Lists01SolarSystem/Lists01SolarSystem/Program.cs)
 	* Checking mutiple values and counting
 	* Maping values
 * Use object orientation:
