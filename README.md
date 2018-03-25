@@ -82,7 +82,7 @@ The student, on their own, is able to:
 
 ## Data persistance
 * understanding and usage of basic SQL commands
-	* select, insert, update, delete
+	* ~~select~~, ~~insert~~, ~~update~~, ~~delete~~
 * connecting database to backend application
 	* database framework configuration
 * understanding Object Relational Mapping
@@ -153,5 +153,6 @@ The student, on their own, is able to:
 	* Using complex data structures
 	* Understanding and using table connections
 	* Understanding migration
+	* /play rimshot
 
 
