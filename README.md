@@ -21,14 +21,14 @@ This site was built using [GitHub Pages](https://pages.github.com/).
 # Skills
 The student, on their own, is able to:
 
-* Use the command line:
+* Use the [command line](https://docs.google.com/spreadsheets/d/1QvmT8nzd6iJ3blg6utnlJ1ICDlabPakSgjoi_z4KPhs/edit#gid=1880545517) :
 	* Traversing directories
 	* Moving, copying, creating, deleting files
 	* Passing command line arguments to commands
-* Use git:
+* Use [git](https://docs.google.com/spreadsheets/d/1QvmT8nzd6iJ3blg6utnlJ1ICDlabPakSgjoi_z4KPhs/edit#gid=934284214):
 	* Commit, add, push, pull
 	* Review other's code
-* Follow indentation and coding styleguides in their code
+* Follow indentation and coding [styleguides](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions) in their code
 * Create variables and methods on a given specification
 * Use conditions and loops:
 	* Filtering
