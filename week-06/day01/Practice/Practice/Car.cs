@@ -10,7 +10,7 @@ namespace Practice
 
         public Car()
         {
-            distanceTaken = 0;
+            distanceTaken = 10;
         }
 
         public void Move(int meter)

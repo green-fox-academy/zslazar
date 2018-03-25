@@ -41,25 +41,25 @@ The student, on their own, is able to:
 	* Understanding the difference between classes and objects
 	* Instantiating and using objects
 	* Understanding "this" keyword
-* Handle errors and exceptions
+* [Handle errors and exceptions](https://github.com/greenfox-academy/zslazar/tree/master/week-03/day-01/02-PrintEachLine)
 * Determine the output of expressions
 * Explain their own code
-* Write unit tests for functions and methods
+* Write [unit tests for functions and methods](https://github.com/greenfox-academy/zslazar/tree/master/week-04/day-03/01-Apples)
 
 
 # Backend Orientation Exam Competencies
 
-## Interfaces and abstract classes
+## [Interfaces](https://github.com/greenfox-academy/zslazar/tree/master/week-06/day01/Practice) and abstract classes
 * usage of interfaces and abstract classes
 * understanding the difference between interfaces and abstract classes
 * understand when to use interface and when to use super class
 
 ## Queries
-* usage of language integrated quaries e.g. LINQ/StreamApi
+* usage of language integrated quaries e.g. [LINQ](https://github.com/greenfox-academy/zslazar/tree/master/week-06/day02/ExerciseOne)
 * understanding the syntax
 * able to write simple custom quaries
 
-## Build tool
+## [Build](https://github.com/dotnet/docs/blob/master/docs/core/tools/dotnet-run.md) tool
 * use build tools to build and run your applications e.g. gradle/.Net CLI
 * dependency definition
 * able to restore 3rd party library dependencies
@@ -69,7 +69,7 @@ The student, on their own, is able to:
 * find documentation and usage examples
 
 ## Backend Framework
-* creating a Web Application with the given backend framework e.g. Spring/ASP.Net Core
+* creating a [Web Application](https://github.com/greenfox-academy/zslazar/tree/master/week-08/day05/DogSheetWA) with the given backend framework e.g. Spring/ASP.Net Core
 * understanding the used components
 * find documentation and usage examples
 * understanding the framework and the application as web backend
@@ -104,13 +104,13 @@ The student, on their own, is able to:
 * body
 * templates
 
-## REST Web backend
+## [REST](https://github.com/greenfox-academy/zslazar/tree/master/week-10/day02/Cars) Web backend
 * understand what is an API and can use it
 * use JSON objects
 * understand the concept of serialization
 * able to use Postman
 
-## Endpoint tests
+## [Endpoint tests](https://github.com/greenfox-academy/zslazar/tree/master/week-09/day03)
 * able to make difference between unit test and integration test
 * create endpoint test
 	* with the help of a mock server
@@ -132,10 +132,10 @@ The student, on their own, is able to:
 * Understand API documentation
 * Understand token based authorization
 * Refactor code:
-* Create meaningful names for methods, classes and variables
-* Split bigger functions to smaller ones
-* Separate functionalities to different files
-* Point out code smells
+	* Create meaningful names for methods, classes and variables
+	* Split bigger functions to smaller ones
+	* Separate functionalities to different files
+	* Point out code smells
 * Understand base concept of hosting
 * Deployment and continuous integration
 * Using design patterns
