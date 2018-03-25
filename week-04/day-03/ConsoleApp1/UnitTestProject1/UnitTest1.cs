@@ -23,12 +23,12 @@ namespace UnitTestProject1
             //////////////////////////////////
             //megadod az ertekeket es h azokat h minek akarod megfeleltetni
             //lenti pelda 1,2,3 mint x es 4,5,6 etrek mint y
-            MathTask m = new MathTask();
+            /*MathTask m = new MathTask();
             public void Add([Values(1, 2, 3)] double x [Values(4, 5, 6)] double y)
             {
                 var result = m.Add(x, y);
                 Assert.AreEqual(10, x);
-            }
+            }*/
 
         }
 
