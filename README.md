@@ -35,7 +35,7 @@ The student, on their own, is able to:
 	* Finding elements or [index](https://github.com/greenfox-academy/zslazar/blob/master/week-02/day-02/07-PrintThird/07-PrintThird/Program.cs)
 	* [Generating lists](https://github.com/greenfox-academy/zslazar/blob/master/week-02/day-03/Lists01SolarSystem/Lists01SolarSystem/Program.cs)
 	* Checking mutiple values and counting
-	* Maping values
+	* [Maping values](https://github.com/greenfox-academy/zslazar/tree/master/week-02/day-03/Dictionary02StudentCounter)
 * Use object orientation:
 	* Create and inherit classes including fields and methods on a given specification
 	* Understanding the difference between classes and objects
