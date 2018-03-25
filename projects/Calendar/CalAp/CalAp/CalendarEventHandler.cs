@@ -72,17 +72,17 @@ namespace CalAp
         {
             return new Event()
             {
-                Summary = "EventUpdate();",
+                Summary = "RepoMeeting;",
                 Location = "Andrássy út 66, Budapest, 1062",
                 Description = "No chance.",
                 Start = new EventDateTime()
                 {
-                    DateTime = DateTime.Parse("2018-03-22T19:00:00"),
+                    DateTime = DateTime.Parse("2018-03-23T16:00:00"),
                     TimeZone = "Europe/Budapest",
                 },
                 End = new EventDateTime()
                 {
-                    DateTime = DateTime.Parse("2018-03-22T20:00:00"),
+                    DateTime = DateTime.Parse("2018-03-23T17:00:00"),
                     TimeZone = "Europe/Budapest",
                 },
                 /*Recurrence = new String[] { "RRULE:FREQ=DAILY;COUNT=2" },
