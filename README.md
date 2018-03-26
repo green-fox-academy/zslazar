@@ -49,7 +49,7 @@ The student, on their own, is able to:
 
 # Backend Orientation Exam Competencies
 
-## [Interfaces](https://github.com/greenfox-academy/zslazar/tree/master/week-06/day01/Practice) and abstract classes
+## [Interfaces](https://github.com/greenfox-academy/zslazar/tree/master/week-06/day01/Practice) and [abstract classes](https://github.com/greenfox-academy/zslazar/tree/master/week-06/day01/Zoo)
 * usage of interfaces and abstract classes
 * understanding the difference between interfaces and abstract classes
 * understand when to use interface and when to use super class
