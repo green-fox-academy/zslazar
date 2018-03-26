@@ -129,7 +129,7 @@ The student, on their own, is able to:
 * Use git:
 	* Resolving a simple merge conflict
 	* Creating a pull request
-* Understand API documentation
+* Understand [API documentation](https://github.com/greenfox-academy/teaching-materials/blob/master/project/reddit/apispec.md)
 * Understand token based authorization
 * Refactor code:
 	* Create meaningful names for methods, classes and variables
